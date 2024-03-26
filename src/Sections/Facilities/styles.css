@@ -1,0 +1,54 @@
+.facilities-outter-container {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+.facilities-outter-container .facilities-video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.facilities-outter-container .facilities-video-wrapper video {
+  width: 100%;
+}
+.facilities-outter-container .facilities-video-wrapper .facilities-textBox-container {
+  width: 351px;
+  height: 204px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  position: absolute;
+  z-index: 20;
+  bottom: 35px;
+  left: 35px;
+}
+.facilities-outter-container .facilities-video-wrapper .facilities-textBox-container img {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 50px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100px;
+}
+.facilities-outter-container .facilities-video-wrapper .facilities-textBox-container h1 {
+  color: var(--Blue, #0e2e51);
+  font-family: "SF Pro Display";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: 0.24px;
+}
+.facilities-outter-container .facilities-video-wrapper .facilities-textBox-container p {
+  color: var(--Black, #2e2e2e);
+  font-family: "SF Pro Display";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 141.176% */
+  letter-spacing: 0.34px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,107 @@
+.Bitoutne-Embark {
+  background: #fff;
+  //   width: 1440px;
+  //   height: 560px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-left: 50px;
+  margin-right: 50px;
+  width: auto;
+  margin-top: 60px;
+  text-align: left;
+
+  flex-direction: row;
+
+  @media (max-width: 1233px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.Embark-conatiner-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  @media (max-width: 1233px) {
+    width: 100%;
+  }
+  .join-left-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 12px;
+    .left-btn-box {
+      display: flex;
+      padding: 16px 20px;
+      align-items: center;
+      gap: 8px;
+
+      border-radius: 16px;
+      border: 1px solid var(--Blue, #0e2e51);
+      background: #fff;
+
+      color: var(--Blue, #0e2e51);
+      text-align: center;
+      font-family: "SF Pro Display";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.embark-conatiner-left-items {
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  .waiting-text {
+    width: 480px;
+    color: #0e2e51;
+    font-family: "SF Pro Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: 0.4px;
+  }
+
+  .embark-text {
+    width: 100%;
+    color: var(--Blue, #0e2e51);
+    font-family: "SF Pro Display";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 52.8px */
+    letter-spacing: -1.32px;
+    .gentiq {
+      background: linear-gradient(180deg, #0e2e51 0%, #a8d7fa 121.67%);
+      background-clip: text;
+      margin-left: 10px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.Embark-conatiner-right {
+  border-radius: 20px;
+  display: flex;
+  // width: 716px;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+  }
+}

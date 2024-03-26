@@ -1,0 +1,146 @@
+.Biotune-Gentic-Advantage {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 50px 60px 50px;
+  text-align: left;
+  flex-direction: column;
+}
+
+.gentic-conatiner {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 100px;
+  @media (max-width: 1220px) {
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
+}
+
+.gentic-advan-heading {
+  color: var(--Blue, #0e2e51);
+  font-family: "SF Pro Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 108.333% */
+  letter-spacing: -1.44px;
+}
+
+.left-gentic-item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  margin-top: 100px;
+
+  img {
+    width: 100%;
+
+    @media (max-width: 1440px) {
+      width: 400px;
+
+      height: auto;
+    }
+
+    @media (max-width: 1220px) {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+    @media (max-width: 390px) {
+      height: 160px;
+    }
+  }
+}
+.right-gentic-item-box {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 60%;
+  @media (max-width: 1220px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-top: 20px;
+  }
+  @media (max-width: 390px) {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+
+.right-gentic-item-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: solid 1px #e7eaee;
+  padding-bottom: 16px;
+
+  .gentic-item-inner {
+    display: flex;
+    flex-direction: column;
+
+    .heading-item2 {
+      align-self: stretch;
+      opacity: 0.6;
+
+      color: #0e2e51;
+      font-family: "SF Pro Display";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 140% */
+      letter-spacing: 0.2px;
+      transition: ease-in-out 0.4s;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .heading-item2 {
+        color: var(--Blue, #0e2e51);
+        opacity: 1;
+        font-family: "SF Pro Display";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: 0.24px;
+
+        align-self: stretch;
+      }
+    }
+    .heading-item {
+      color: var(--Blue, #0e2e51);
+      font-family: "SF Pro Display";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px; /* 116.667% */
+      letter-spacing: 0.24px;
+
+      align-self: stretch;
+    }
+
+    .para-item {
+      color: var(--Gray, #6d6d6d);
+      font-family: "SF Pro Display";
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px; /* 141.176% */
+      letter-spacing: 0.34px;
+    }
+  }
+}

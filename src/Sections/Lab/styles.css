@@ -1,0 +1,71 @@
+.Lab-container {
+  position: relative;
+  height: 50vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.Lab-container h1 {
+  color: var(--Blue, #0e2e51);
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 60px */
+  letter-spacing: -1.2px;
+  max-width: 1040px;
+}
+.Lab-container h1 span {
+  background: linear-gradient(180deg, #0e2e51 0%, #a8d7fa 121.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1440px) {
+  .Lab-container h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .Lab-container h1 {
+    font-size: 40px;
+  }
+}
+.Lab-container h2 {
+  color: #0e2e51;
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 141.176% */
+  letter-spacing: 0.34px;
+  max-width: 1040px;
+}
+@media (max-width: 1440px) {
+  .Lab-container h2 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1440px) {
+  .Lab-container {
+    height: 50vw;
+  }
+}
+.Lab-container .lab-img-wrapper {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  height: fit-content;
+  z-index: -1;
+}
+.Lab-container .lab-img-wrapper img {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  object-fit: cover;
+}/*# sourceMappingURL=styles.css.map */

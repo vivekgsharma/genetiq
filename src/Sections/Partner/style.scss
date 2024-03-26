@@ -1,0 +1,67 @@
+.Bitoutne-Partner {
+  //   width: 1440px;
+  //   height: 732px;
+
+  padding: 90px 50px 30px 50px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  background: #fff;
+}
+
+.partnr-text {
+  width: 100%;
+  color: var(--Blue, #0e2e51);
+  text-align: left;
+  font-family: "SF Pro Display";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px; /* 108.333% */
+  letter-spacing: -1.44px;
+}
+
+.partner-conatiner {
+  display: flex;
+  flex-direction: column;
+
+  .partner-box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .partner-item {
+    display: flex;
+    width: 11.2vw;
+
+    height: 150px;
+
+    padding: 0px 49px 0px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(14, 46, 81, 0.1);
+
+    @media (max-width: 1920px) {
+      width: 12.6vw;
+    }
+
+    img {
+      max-width: 80%;
+      @media (max-width: 786px) {
+        max-width: none;
+        width: 25vw;
+      }
+      @media (max-width: 390px) {
+        max-width: none;
+        width: 30vw;
+      }
+    }
+  }
+}
