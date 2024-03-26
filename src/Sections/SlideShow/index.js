@@ -6,7 +6,8 @@ import video1 from "../../Assets/Slider/human.mp4";
 const data = [
   {
     id: 1,
-    text: "GenetiQ: Personalized Health Journey",
+    highlight: "GenetiQ: ",
+    text: " GenetiQ: Personalized Health Journey",
     text2: "Initiation",
     text3:
       "Your journey begins with a cutting-edge 3D body scan, capturing your physical form in unparalleled detail.",
@@ -14,7 +15,8 @@ const data = [
   },
   {
     id: 2,
-    text: "GenetiQ: Personalized Health Journey",
+    highlight: "GenetiQ: ",
+    text: " GenetiQ: Personalized Health Journey",
     text2: "In-depth Analysis",
     text3:
       "Next, we delve deep into your genetic blueprint with our platinum 120x genome sequencing while you relax in our serene setting, enhanced with an FDG activator tracer for precise PET CT scan preparation.",
@@ -22,19 +24,21 @@ const data = [
   },
   {
     id: 3,
-    text: "GenetiQ: Personalized Health Journey",
+    highlight: "GenetiQ: ",
+    text: " GenetiQ: Personalized Health Journey",
     text2: "Advanced Imaging",
     text3:
-      "Next, we delve deep into your genetic blueprint with our platinum 120x genome sequencing while you relax in our serene setting, enhanced with an FDG activator tracer for precise PET CT scan preparation.",
+      "A swift, 45-second full-body PET CT scan with Explorer technology, revealing insights beyond the surface.",
     url: "https://firebasestorage.googleapis.com/v0/b/dicalmiami-49715.appspot.com/o/genetiq%2Fmachine.png?alt=media&token=34cc969d-ef49-42be-8ba8-f31223f83e96",
   },
   {
     id: 4,
-    text: "Vietnam",
-    text2: "GenetiQ: Personalized Health Journey",
+    highlight: "GenetiQ: ",
+    text: " GenetiQ: Personalized Health Journey",
+    text2: "In-depth Analysis",
     text3:
-      "Your journey begins with a cutting-edge 3D body scan, capturing your physical form in unparalleled detail.",
-    url: { video1 },
+      "Conclude with a consultation from our expert doctors. Together, we create your digital twin, unveiling a tailored lifestyle plan. To bring this vision to life at home, choose between a complimentary Apple Vision Pro VR headset or Meta Quest 3, enriching your experience with the GenetiQ app.",
+    url: "https://firebasestorage.googleapis.com/v0/b/dicalmiami-49715.appspot.com/o/genetiq%2Fglasses.mp4?alt=media&token=dba08269-d40c-47c0-82c9-a581b4cb7f10",
   },
 ];
 
@@ -65,14 +69,14 @@ function Images({ text, url, text2, text3 }) {
 function Imagesb({ text, url, text2, text3 }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useTransform(scrollYProgress, [0, 1], [-1000, 800], []);
+  const y = useTransform(scrollYProgress, [0, 1], [-800, 100], []);
   const statick = useTransform(scrollYProgress, [0, 1], [-300, 500], []);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
 
   return (
     <section className="section">
       <div className="slideShow-text-container">
-        <motion.h1 style={{ y, opacity: opacity }}>{text}</motion.h1>
+        <motion.h1 style={{ y, opacity: opacity }}> {text}</motion.h1>
         <motion.h2 style={{ y }}>{text}</motion.h2>
         <motion.p style={{ y, opacity: opacity }}>{text3}</motion.p>
       </div>
@@ -98,7 +102,7 @@ function Imagesc({ text, url, text2, text3 }) {
   return (
     <section className="section-video">
       <div className="slideShow-text-container">
-        <motion.h1 style={{ y, opacity: opacity }}>{text}</motion.h1>
+        <motion.h1 style={{ y, opacity: opacity }}> {text}</motion.h1>
         <motion.h2 style={{ y }}>{text}</motion.h2>
         <motion.p style={{ y, opacity: opacity }}>{text3}</motion.p>
       </div>
@@ -145,6 +149,13 @@ export default function Slideshow() {
         text2={data[2].text2}
         text3={data[2].text3}
         url={data[2].url}
+      />
+      <Images
+        key={data[3].id}
+        text={data[3].text}
+        text2={data[3].text2}
+        text3={data[3].text3}
+        url={data[3].url}
       />
     </div>
   );

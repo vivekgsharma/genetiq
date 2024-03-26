@@ -34,10 +34,11 @@ function App() {
         <div id="Facilities" className="advantages-outter-container">
           <Facilities />
         </div>
+
+        <Slideshow />
         <div className="lab-outter-container">
           <Lab />
         </div>
-        <Slideshow />
         <div id="partners" className="partners-outter-container">
           <Partner />
         </div>

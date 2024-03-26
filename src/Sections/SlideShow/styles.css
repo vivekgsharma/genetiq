@@ -1,14 +1,5 @@
-.background {
+.background-slides {
   text-align: left;
-}
-
-.section {
-  display: flex;
-  height: 300vh;
-  width: fit-content;
-  justify-content: space-between;
-  text-align: left;
-  flex-direction: row;
 }
 
 .section-video {
@@ -24,12 +15,24 @@
   width: 100%;
   z-index: -10;
 }
+@media (max-width: 640px) {
+  .section-video .video-container {
+    width: 100vw;
+    height: 100%;
+  }
+}
 .section-video .video-container video {
   width: 100%;
   height: 100%;
   position: absolute;
   object-fit: cover;
   z-index: -10;
+}
+@media (max-width: 640px) {
+  .section-video .video-container video {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .videoWrapper {
@@ -42,9 +45,16 @@
 }
 
 .background {
-  height: 500vh;
+  height: 400vh;
   background: black;
   padding: 30px;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .background {
+    flex-direction: column;
+    height: 600vh;
+  }
 }
 .background .slideShow-text-container {
   display: flex;
@@ -82,6 +92,12 @@
   letter-spacing: 0.24px;
   width: 100%;
 }
+.background .slideShow-text-container span {
+  background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .background img {
   width: 50%;
 }
@@ -94,6 +110,12 @@
   position: relative;
   scroll-snap-align: center;
   perspective: 500px;
+}
+@media (max-width: 640px) {
+  .background section {
+    flex-direction: column;
+    height: 150vh;
+  }
 }
 .background section > div {
   width: 300px;

@@ -29,8 +29,30 @@ function GeneticFooter() {
           <div className="address-text">Contact</div>
           <div className="text-box-footer-right">
             <div className="text-box-footer-right">
-              Prepaire Global Holdings IRENA Building - Masdar City Abu Dhabi
-              United Arab Emirates
+              <a
+                className="hover"
+                onClick={() =>
+                  (window.location.href = "mailto:sales@prepaire.com")
+                }
+              >
+                sales@prepaire.com
+              </a>
+              <a
+                className="hover"
+                onClick={() =>
+                  (window.location.href = "mailto:developers@prepaire.com")
+                }
+              >
+                developers@prepaire.com
+              </a>
+              <a
+                className="hover"
+                onClick={() =>
+                  (window.location.href = "mailto:investor@prepaire.com")
+                }
+              >
+                investors@prepaire.com
+              </a>
             </div>
           </div>
         </div>

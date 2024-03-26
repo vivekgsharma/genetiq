@@ -41,11 +41,12 @@
 .opener-tittlea-container {
   display: flex;
   flex-direction: row;
-  gap: 23px;
+  gap: 60px;
   justify-content: center;
 }
 .opener-tittlea-container img {
   width: auto;
+  animation: rotation 5s linear infinite;
 }
 @media (max-width: 768px) {
   .opener-tittlea-container img {
@@ -60,7 +61,7 @@
 
 .opener-tittleb-container {
   display: flex;
-  gap: 23px;
+  gap: 60px;
   justify-content: center;
 }
 .opener-tittleb-container img {

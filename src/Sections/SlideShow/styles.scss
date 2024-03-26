@@ -1,15 +1,15 @@
-.background {
+.background-slides {
   text-align: left;
 }
-.section {
-  display: flex;
-  height: 300vh;
-  width: fit-content;
-  justify-content: space-between;
+// .section {
+//   display: flex;
+//   height: 300vh;
+//   width: fit-content;
+//   justify-content: space-between;
 
-  text-align: left;
-  flex-direction: row;
-}
+//   text-align: left;
+//   flex-direction: row;
+// }
 
 .section-video {
   display: flex;
@@ -23,12 +23,20 @@
     height: 500vh;
     width: 100%;
     z-index: -10;
+    @media (max-width: 640px) {
+      width: 100vw;
+      height: 100%;
+    }
     video {
       width: 100%;
       height: 100%;
       position: absolute;
       object-fit: cover;
       z-index: -10;
+      @media (max-width: 640px) {
+        width: auto;
+        height: 100%;
+      }
     }
   }
 }
@@ -43,9 +51,15 @@
 }
 
 .background {
-  height: 500vh;
+  height: 400vh;
   background: black;
   padding: 30px;
+  text-align: left;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    height: 600vh;
+  }
 
   .slideShow-text-container {
     display: flex;
@@ -87,6 +101,13 @@
       letter-spacing: 0.24px;
       width: 100%;
     }
+
+    span {
+      background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   img {
@@ -102,6 +123,10 @@
     position: relative;
     scroll-snap-align: center;
     perspective: 500px;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      height: 150vh;
+    }
   }
 
   section > div {

@@ -1,19 +1,40 @@
 .Genetic-footer {
   display: flex;
   width: auto;
-  min-width: 95vw;
-  padding: 90px 30px 30px 30px;
+  flex-direction: row;
+  padding: 90px 50px 30px 50px;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   background: #fff;
   text-align: left;
+  gap: auto;
+}
+@media (max-width: 890px) {
+  .Genetic-footer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}
+
+.hover:hover {
+  cursor: pointer !important;
+  color: #2e2e2e !important;
 }
 
 .footer-right-container {
   display: flex;
   align-items: flex-start;
+  flex-direction: row;
   gap: 80px;
+}
+@media (max-width: 550px) {
+  .footer-right-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
 }
 .footer-right-container .footer-right-item {
   display: flex;

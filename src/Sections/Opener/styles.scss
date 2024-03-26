@@ -35,10 +35,11 @@
 .opener-tittlea-container {
   display: flex;
   flex-direction: row;
-  gap: 23px;
+  gap: 60px;
   justify-content: center;
   img {
     width: auto;
+    animation: rotation 5s linear infinite;
 
     @media (max-width: 768px) {
       width: 20%;
@@ -51,7 +52,7 @@
 
 .opener-tittleb-container {
   display: flex;
-  gap: 23px;
+  gap: 60px;
   justify-content: center;
 
   img {
