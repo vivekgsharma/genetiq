@@ -33,7 +33,6 @@
 
 .gentic-advan-heading {
   color: var(--Blue, #0e2e51);
-  font-family: "SF Pro Display";
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -113,7 +112,6 @@
   align-self: stretch;
   opacity: 0.6;
   color: #0e2e51;
-  font-family: "SF Pro Display";
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -125,7 +123,6 @@
 .right-gentic-item-content .gentic-item-inner:hover .heading-item2 {
   color: var(--Blue, #0e2e51);
   opacity: 1;
-  font-family: "SF Pro Display";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -135,7 +132,6 @@
 }
 .right-gentic-item-content .gentic-item-inner .heading-item {
   color: var(--Blue, #0e2e51);
-  font-family: "SF Pro Display";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -145,7 +141,6 @@
 }
 .right-gentic-item-content .gentic-item-inner .para-item {
   color: var(--Gray, #6d6d6d);
-  font-family: "SF Pro Display";
   font-size: 17px;
   font-style: normal;
   font-weight: 300;

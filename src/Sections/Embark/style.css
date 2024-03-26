@@ -45,12 +45,15 @@
   background: #fff;
   color: var(--Blue, #0e2e51);
   text-align: center;
-  font-family: "SF Pro Display";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: 1px;
+  text-decoration: none;
+}
+.Embark-conatiner-left .join-left-button .left-btn-box:hover {
+  cursor: pointer;
 }
 
 .embark-conatiner-left-items {
@@ -62,7 +65,6 @@
 .embark-conatiner-left-items .waiting-text {
   width: 480px;
   color: #0e2e51;
-  font-family: "SF Pro Display";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -72,7 +74,6 @@
 .embark-conatiner-left-items .embark-text {
   width: 100%;
   color: var(--Blue, #0e2e51);
-  font-family: "SF Pro Display";
   font-size: 44px;
   font-style: normal;
   font-weight: 700;

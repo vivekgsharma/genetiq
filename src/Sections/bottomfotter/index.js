@@ -6,22 +6,32 @@ import Instalogo from "../../Assets/BottomBar/insta.svg";
 import Linkdinlogo from "../../Assets/BottomBar/linkdin.svg";
 
 import Circlelogo from "../../Assets/BottomBar/circle.svg";
+import { Link } from "react-router-dom";
 
 function Bottombar() {
   return (
     <div className="Bottom-bar-container">
       <div className="first-item-bottom">
-        <button className="bootom-btn">
+        <Link
+          className="bootom-btn"
+          to="https://twitter.com/prepaire_labs?lang=en "
+        >
           <img src={Xlogo} alt="" />
-        </button>
+        </Link>
 
-        <button className="bootom-btn">
+        <Link
+          className="bootom-btn"
+          to="https://www.instagram.com/prepaire_labs/ "
+        >
           <img src={Instalogo} alt="" />
-        </button>
+        </Link>
 
-        <button className="bootom-btn">
+        <Link
+          className="bootom-btn"
+          to="https://ie.linkedin.com/company/prepaire-labs"
+        >
           <img src={Linkdinlogo} alt="" />
-        </button>
+        </Link>
       </div>
       <div className="second-item-bottom">
         <div className="text-terms-second-item">Terms of service</div>

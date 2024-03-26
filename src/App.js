@@ -12,41 +12,44 @@ import GeneticFooter from "./Sections/genneticFooter";
 import Bottombar from "./Sections/bottomfotter";
 import Embark from "./Sections/Embark";
 import Slideshow from "./Sections/SlideShow";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <div className="Hero-outter-container">
-        <Hero />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="Hero-outter-container">
+          <Hero />
+        </div>
+        <div id="about" className="oppener-outter-container">
+          <Opener />
+        </div>
+        <div className="animatedCarousel-outter-container">
+          <AnimatedCarousel />
+        </div>
+        <div className="advantages-outter-container">
+          <Advantages />
+        </div>
+        <div id="Facilities" className="advantages-outter-container">
+          <Facilities />
+        </div>
+        <div className="lab-outter-container">
+          <Lab />
+        </div>
+        <Slideshow />
+        <div id="partners" className="partners-outter-container">
+          <Partner />
+        </div>
+        <div id="journey" className="partners-outter-container">
+          <Embark />
+        </div>
+        <div className="footer-outter-container">
+          <GeneticFooter />
+          <Bottombar />
+        </div>
       </div>
-      <div className="oppener-outter-container">
-        <Opener />
-      </div>
-      <div className="animatedCarousel-outter-container">
-        <AnimatedCarousel />
-      </div>
-      <div className="advantages-outter-container">
-        <Advantages />
-      </div>
-      <div className="advantages-outter-container">
-        <Facilities />
-      </div>
-      <div className="lab-outter-container">
-        <Lab />
-      </div>
-      <Slideshow />
-      <div className="partners-outter-container">
-        <Partner />
-      </div>
-      <div className="partners-outter-container">
-        <Embark />
-      </div>
-      <div className="footer-outter-container">
-        <GeneticFooter />
-        <Bottombar />
-      </div>
-    </div>
+    </Router>
   );
 }
 

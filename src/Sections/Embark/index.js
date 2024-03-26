@@ -1,5 +1,6 @@
 import "./style.scss";
 import WaitingImg from "../../Assets/waiting-img.png";
+import { Link } from "react-router-dom";
 
 function Embark() {
   return (
@@ -14,7 +15,12 @@ function Embark() {
           </div>
         </div>
         <div className="join-left-button">
-          <div className="left-btn-box">Join waitlist</div>
+          <Link
+            className="left-btn-box"
+            to="https://app.prepaire.com:5067/#/wishlist"
+          >
+            Join waitlist
+          </Link>
         </div>
       </div>
       <div className="Embark-conatiner-right">

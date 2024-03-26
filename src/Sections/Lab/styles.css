@@ -11,7 +11,6 @@
 .Lab-container h1 {
   color: var(--Blue, #0e2e51);
   text-align: center;
-  font-family: "SF Pro Display";
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -38,7 +37,6 @@
 .Lab-container h2 {
   color: #0e2e51;
   text-align: center;
-  font-family: "SF Pro Display";
   font-size: 17px;
   font-style: normal;
   font-weight: 300;

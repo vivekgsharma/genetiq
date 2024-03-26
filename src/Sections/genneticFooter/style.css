@@ -24,7 +24,6 @@
 }
 .footer-right-container .footer-right-item .addresss-text {
   color: var(--Black, #2e2e2e);
-  font-family: "SF Pro Display";
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
@@ -41,7 +40,6 @@
   max-width: 200px;
   align-self: stretch;
   color: var(--Gray, #6d6d6d);
-  font-family: "SF Pro Display";
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -57,7 +55,6 @@
 }
 .text-box-footer-right2 div {
   color: var(--Gray, #6d6d6d);
-  font-family: "SF Pro Display";
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
