@@ -61,6 +61,7 @@
 }
 .opener-tittlea-container img {
   width: auto;
+  animation: rotation 15s linear infinite;
 }
 @media (max-width: 768px) {
   .opener-tittlea-container img {
@@ -82,6 +83,7 @@
 }
 .opener-tittleb-container img {
   width: 120px;
+  animation: rotation 15s linear infinite;
 }
 @media (max-width: 768px) {
   .opener-tittleb-container img {

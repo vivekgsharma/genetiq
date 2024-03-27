@@ -5,6 +5,8 @@
   align-items: flex-start;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: auto;
   margin-top: 60px;
   text-align: left;
@@ -99,9 +101,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
+  height: 393px;
+  overflow: hidden;
 }
 .Embark-conatiner-right img {
   border-radius: 20px;
+  object-fit: cover;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */

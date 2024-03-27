@@ -2,9 +2,9 @@
   display: flex;
   width: auto;
   flex-direction: row;
-  padding: 90px 50px 30px 50px;
+  padding: 90px 50px 90px 50px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1;
   background: #fff;
   text-align: left;
@@ -50,6 +50,15 @@
   font-weight: 500;
   line-height: 24px; /* 141.176% */
   letter-spacing: 0.34px;
+}
+
+.footer-left-logo {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+.footer-left-logo img {
+  width: 182px;
 }
 
 .text-box-footer-right {
