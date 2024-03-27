@@ -2,7 +2,8 @@
   display: flex;
   width: auto;
   padding: 50px;
-  padding-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 60px;
   gap: 32px;
   width: auto;
   overflow: hidden !important;
