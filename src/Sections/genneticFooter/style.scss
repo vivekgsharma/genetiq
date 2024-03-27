@@ -2,9 +2,9 @@
   display: flex;
   width: auto;
   flex-direction: row;
-  padding: 90px 50px 30px 50px;
+  padding: 90px 50px 90px 50px;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1;
   background: #fff;
   text-align: left;
@@ -52,7 +52,14 @@
     }
   }
 }
-
+.footer-left-logo {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  img {
+    width: 182px;
+  }
+}
 .text-box-footer-right {
   display: flex;
   flex-direction: column;
