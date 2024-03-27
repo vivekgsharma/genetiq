@@ -87,7 +87,7 @@
 .card-genitq-container div {
   padding-top: 30px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 6px;
 }
 .card-genitq-container span {
   color: var(--Blue, #0e2e51);
@@ -99,12 +99,12 @@
 }
 .card-genitq-container p {
   color: var(--Gray, #6d6d6d);
+  margin-top: 0px;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.34px;
-  margin-top: 0px;
 }
 .card-genitq-container img {
   width: 100%;
