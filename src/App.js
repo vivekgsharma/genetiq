@@ -35,7 +35,7 @@ function App() {
           <Facilities />
         </div>
 
-        <Slideshow />
+        {/* <Slideshow /> */}
         <div className="lab-outter-container">
           <Lab />
         </div>

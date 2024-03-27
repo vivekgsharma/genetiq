@@ -2,11 +2,17 @@
   display: flex;
   width: auto;
   padding: 50px;
+  padding-bottom: 30px;
   gap: 32px;
+  width: auto;
   overflow: hidden !important;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
 }
 
 .gentiq-Text {
@@ -19,15 +25,33 @@
   line-height: 52px; /* 108.333% */
   letter-spacing: -1.44px;
 }
-.gentix-continer-items {
+.gentix-continer-track {
   display: flex;
+  flex-direction: row;
   gap: 10px;
+  width: fit-content;
 
-  width: 100%;
-  overflow: hidden !important;
-  img {
-    width: 315px;
-    height: 315px;
+  &:hover .gentix-continer-items {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+}
+.gentix-continer-items {
+  width: fit-content;
+  display: flex; // Make the items lay out horizontally.\
+  flex-direction: row;
+  overflow: hidden; // Hide the parts of items that go outside the container.
+  animation: slideRightToLeft 30s linear infinite;
+
+  // Apply the animation.
+  gap: 10px;
+  @media (max-width: 390px) {
+    animation: none;
+
+    img {
+      width: 315px;
+      height: 315px;
+    }
   }
 
   .gentix-conatiner-item-box {
@@ -56,6 +80,7 @@
     }
   }
 }
+
 .card-genitq-container {
   min-width: 300px;
   width: 30%;
@@ -104,29 +129,17 @@
   padding: 0px !important;
   margin: 0px;
 }
-@keyframes slideRightToLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.gentix-continer-items {
-  width: fit-content;
-  display: flex; // Make the items lay out horizontally.\
-  flex-direction: row;
-  overflow: hidden; // Hide the parts of items that go outside the container.
-  animation: slideRightToLeft 30s linear -0s infinite forwards;
-  // Apply the animation.
-  @media (max-width: 390px) {
-    animation: none;
-    flex-direction: column;
-  }
-}
 
 .gentix-conatiner-item-box {
   flex-shrink: 0; // Prevent the boxes from shrinking smaller than their content.
   // Add other styling here as necessary.
+}
+
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

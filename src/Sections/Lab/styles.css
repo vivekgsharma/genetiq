@@ -7,6 +7,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 20px;
+  overflow: hidden;
 }
 .Lab-container h1 {
   color: var(--Blue, #0e2e51);

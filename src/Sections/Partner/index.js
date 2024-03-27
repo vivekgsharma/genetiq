@@ -3,11 +3,11 @@ import "./style.scss";
 import Mgi from "../../Assets/partner/mgi.png";
 import Nvidia from "../../Assets/partner/nvidia.png";
 import Emirates from "../../Assets/partner/Emirate.png";
-import NanoPore from "../../Assets//partner/nanopore.svg";
+import NanoPore from "../../Assets//partner/nanopore.png";
 import UnitedImaging from "../../Assets/partner/united.png";
 import MadsarCity from "../../Assets/partner/Madsar.png";
-import meta from "../../Assets/partner/meta.svg";
-import apple from "../../Assets/partner/apple.svg";
+import meta from "../../Assets/partner/meta.png";
+import apple from "../../Assets/partner/apple.png";
 import celllink from "../../Assets/partner/celllink.png";
 import canfield from "../../Assets/partner/canfield.png";
 
@@ -32,6 +32,8 @@ function Partner() {
           <div className="partner-item">
             <img src={UnitedImaging} alt="" />
           </div>
+        </div>
+        <div className="partner-box1">
           <div className="partner-item">
             <img src={MadsarCity} alt="mgi" />
           </div>

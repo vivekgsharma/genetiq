@@ -1,7 +1,9 @@
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
   width: 100%;
-  overflow: hidden;
+  flex-direction: column;
 }
 /* 
 .App-logo {
@@ -40,4 +42,10 @@
 } */
 
 .Hero-outter-container {
+}
+
+.oppener-outter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

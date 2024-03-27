@@ -1,5 +1,6 @@
 .Biotune-Gentic-Advantage {
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding: 90px 50px 60px 50px;
   text-align: left;
@@ -13,9 +14,13 @@
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
-  padding-top: 100px;
+  padding-top: 48px;
+  @media (max-width: 1260px) {
+    justify-content: flex-start;
+  }
   @media (max-width: 1220px) {
     flex-direction: column;
+    gap: 32px;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -34,49 +39,94 @@
   line-height: 52px; /* 108.333% */
   letter-spacing: -1.44px;
 }
-
+.genetiq-animated-bg {
+  position: absolute;
+  width: 50%;
+  right: 14vw;
+  top: 0%;
+  z-index: -2;
+  @media (min-width: 1620px) {
+    right: 20vw;
+    width: 45%;
+  }
+  @media (max-width: 1206px) {
+    right: 20vw;
+    width: 45%;
+    top: 15%;
+  }
+  @media (max-width: 990px) {
+    right: 20vw;
+    width: 40%;
+    top: 17%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 700px) {
+    right: 0px;
+    width: 90%;
+    top: 10%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 540px) {
+    right: 0px;
+    width: 90%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+}
+.genetiq-animated-bg-mask {
+  position: absolute;
+  width: 50%;
+  right: 14vw;
+  top: 0%;
+  z-index: -1;
+  @media (max-width: 1206px) {
+    right: 20vw;
+    width: 45%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 990px) {
+    right: 20vw;
+    width: 45%;
+    top: 17%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 700px) {
+    right: 0px;
+    width: 100%;
+    top: 8%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 540px) {
+    right: 0px;
+    width: 90%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+}
 .left-gentic-item-box {
   display: flex;
   flex-direction: column;
   gap: 100px;
   justify-content: center;
-  margin-top: 100px;
 
+  width: 50%;
+  max-width: 500px;
+  @media (max-width: 1206px) {
+    width: 100%;
+    max-width: 500px;
+  }
   img {
     width: 100%;
-
-    @media (max-width: 1440px) {
-      width: 400px;
-
-      height: auto;
-    }
-
-    @media (max-width: 1220px) {
-      width: 100%;
-    }
-    @media (max-width: 768px) {
-      height: 300px;
-    }
-    @media (max-width: 390px) {
-      height: 160px;
-    }
   }
 }
 .right-gentic-item-box {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 60%;
-  @media (max-width: 1220px) {
+  width: 50%;
+  @media (max-width: 1206px) {
     width: 100%;
-  }
-  @media (max-width: 768px) {
-    width: 100%;
-    padding-top: 20px;
-  }
-  @media (max-width: 390px) {
-    width: 100%;
-    padding-top: 20px;
   }
 }
 

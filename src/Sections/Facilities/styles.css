@@ -9,33 +9,64 @@
   overflow: hidden;
   border-radius: 0px;
   object-fit: contain;
+  height: 630px;
   border-radius: 20px;
 }
 .facilities-outter-container .facilities-video-wrapper video {
   width: 100%;
 }
+@media (max-width: 1439px) {
+  .facilities-outter-container .facilities-video-wrapper {
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .facilities-outter-container .facilities-video-wrapper {
+    height: fit-content;
+  }
+}
 .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container {
-  width: 351px;
-  height: 204px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 360px;
+  height: fit-content;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgb(255, 255, 255);
   padding: 30px;
   position: absolute;
   z-index: 20;
   bottom: 35px;
   left: 35px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    padding: 0px;
+    padding-top: 32px;
+  }
 }
 .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container img {
   position: absolute;
   top: -25px;
-  right: -25px;
-  width: 50px;
+  right: -45px;
+  width: 80px;
   background-color: white;
   padding: 10px;
   border-radius: 100px;
 }
+@media (max-width: 768px) {
+  .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container img {
+    display: none;
+  }
+}
 .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container h1 {
   color: var(--Blue, #0e2e51);
+  margin: 0px;
+  padding: 0px;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -44,9 +75,12 @@
 }
 .facilities-outter-container .facilities-video-wrapper .facilities-textBox-container p {
   color: var(--Black, #2e2e2e);
+  margin: 0px;
+  padding: 0px;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
   line-height: 24px; /* 141.176% */
   letter-spacing: 0.34px;
+  width: 94%;
 }/*# sourceMappingURL=styles.css.map */

@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 96%;
+  width: auto;
   padding-left: 30px;
   padding-right: 30px;
 }

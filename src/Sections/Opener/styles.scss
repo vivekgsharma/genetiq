@@ -2,26 +2,37 @@
   display: flex;
   flex-direction: column;
   padding: 50px;
+  padding-top: 90px;
   gap: 12px;
+  justify-content: center;
+  @media (max-width: 390px) {
+    padding: 16px;
+  }
+
   h1 {
     text-align: right;
     font-size: 65px;
     font-style: normal;
     font-weight: 700;
-    line-height: 110%; /* 93.5px */
+    line-height: 120%; /* 93.5px */
     letter-spacing: -2.55px;
-
+    padding: 0px;
+    margin: 0px;
     background: linear-gradient(90deg, #0e2e51 0%, #a9d8fb 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
+    @media (min-width: 1920px) {
+      font-size: 85px;
+    }
     @media (max-width: 1920px) {
       font-size: 85px;
     }
     @media (max-width: 1700px) {
-      font-size: 65px;
+      font-size: 4.5vw;
     }
+
     @media (max-width: 768px) {
       font-size: 36px;
       text-align: left;
@@ -35,16 +46,20 @@
 .opener-tittlea-container {
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 23px;
   justify-content: center;
+  align-items: center;
+
   img {
     width: auto;
-    animation: rotation 5s linear infinite;
+
+    // animation: rotation 5s linear infinite;
 
     @media (max-width: 768px) {
       width: 20%;
     }
   }
+
   @media (max-width: 768px) {
     flex-direction: row-reverse;
   }
@@ -52,12 +67,14 @@
 
 .opener-tittleb-container {
   display: flex;
-  gap: 60px;
+  gap: 23px;
   justify-content: center;
+  height: fit-content;
+  align-items: center;
 
   img {
-    width: auto;
-    animation: rotation 5s linear infinite;
+    width: 120px;
+    // animation: rotation 5s linear infinite;
     @media (max-width: 768px) {
       width: 20%;
     }

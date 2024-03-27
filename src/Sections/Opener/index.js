@@ -44,7 +44,7 @@ function Opener() {
         </motion.div>
       </motion.div>
 
-      <img src={bg} alt="bg-app" />
+      <img src={bg} alt="bg-app" style={{ paddingTop: "0px" }} />
     </div>
   );
 }

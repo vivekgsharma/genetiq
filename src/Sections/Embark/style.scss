@@ -7,8 +7,8 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   width: auto;
   margin-top: 60px;
   text-align: left;
@@ -16,8 +16,13 @@
   flex-direction: row;
 
   @media (max-width: 1233px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 50px;
+  }
+
+  @media (max-width: 390px) {
+    flex-direction: column-reverse;
+    padding: 16px;
   }
 }
 .Embark-conatiner-left {
@@ -67,9 +72,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  width: 100%;
 
   .waiting-text {
-    width: 480px;
     color: #0e2e51;
 
     font-size: 20px;
@@ -80,7 +85,7 @@
   }
 
   .embark-text {
-    width: 100%;
+    width: 90%;
     color: var(--Blue, #0e2e51);
 
     font-size: 44px;
@@ -104,6 +109,7 @@
   // width: 716px;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   img {
     border-radius: 20px;

@@ -1,5 +1,6 @@
 .Biotune-Gentic-Advantage {
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding: 90px 50px 60px 50px;
   text-align: left;
@@ -13,11 +14,17 @@
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
-  padding-top: 100px;
+  padding-top: 48px;
+}
+@media (max-width: 1260px) {
+  .gentic-conatiner {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 1220px) {
   .gentic-conatiner {
     flex-direction: column;
+    gap: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -40,59 +47,118 @@
   letter-spacing: -1.44px;
 }
 
+.genetiq-animated-bg {
+  position: absolute;
+  width: 50%;
+  right: 14vw;
+  top: 0%;
+  z-index: -2;
+}
+@media (min-width: 1620px) {
+  .genetiq-animated-bg {
+    right: 20vw;
+    width: 45%;
+  }
+}
+@media (max-width: 1206px) {
+  .genetiq-animated-bg {
+    right: 20vw;
+    width: 45%;
+    top: 15%;
+  }
+}
+@media (max-width: 990px) {
+  .genetiq-animated-bg {
+    right: 20vw;
+    width: 40%;
+    top: 17%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 700px) {
+  .genetiq-animated-bg {
+    right: 0px;
+    width: 90%;
+    top: 10%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 540px) {
+  .genetiq-animated-bg {
+    right: 0px;
+    width: 90%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+}
+
+.genetiq-animated-bg-mask {
+  position: absolute;
+  width: 50%;
+  right: 14vw;
+  top: 0%;
+  z-index: -1;
+}
+@media (max-width: 1206px) {
+  .genetiq-animated-bg-mask {
+    right: 20vw;
+    width: 45%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 990px) {
+  .genetiq-animated-bg-mask {
+    right: 20vw;
+    width: 45%;
+    top: 17%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 700px) {
+  .genetiq-animated-bg-mask {
+    right: 0px;
+    width: 100%;
+    top: 8%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 540px) {
+  .genetiq-animated-bg-mask {
+    right: 0px;
+    width: 90%;
+    top: 15%;
+    transform: rotateY(180deg);
+  }
+}
+
 .left-gentic-item-box {
   display: flex;
   flex-direction: column;
   gap: 100px;
   justify-content: center;
-  margin-top: 100px;
+  width: 50%;
+  max-width: 500px;
+}
+@media (max-width: 1206px) {
+  .left-gentic-item-box {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 .left-gentic-item-box img {
   width: 100%;
-}
-@media (max-width: 1440px) {
-  .left-gentic-item-box img {
-    width: 400px;
-    height: auto;
-  }
-}
-@media (max-width: 1220px) {
-  .left-gentic-item-box img {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .left-gentic-item-box img {
-    height: 300px;
-  }
-}
-@media (max-width: 390px) {
-  .left-gentic-item-box img {
-    height: 160px;
-  }
 }
 
 .right-gentic-item-box {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 60%;
+  width: 50%;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1206px) {
   .right-gentic-item-box {
     width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .right-gentic-item-box {
-    width: 100%;
-    padding-top: 20px;
-  }
-}
-@media (max-width: 390px) {
-  .right-gentic-item-box {
-    width: 100%;
-    padding-top: 20px;
   }
 }
 
