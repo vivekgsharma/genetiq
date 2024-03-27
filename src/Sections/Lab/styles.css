@@ -8,6 +8,7 @@
   flex-direction: column;
   margin-top: 20px;
   overflow: hidden;
+  gap: 24px;
 }
 .Lab-container h1 {
   color: var(--Blue, #0e2e51);
@@ -18,6 +19,8 @@
   line-height: 100%; /* 60px */
   letter-spacing: -1.2px;
   max-width: 1040px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .Lab-container h1 span {
   background: linear-gradient(180deg, #0e2e51 0%, #a8d7fa 121.67%);
@@ -27,7 +30,7 @@
 }
 @media (max-width: 1440px) {
   .Lab-container h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
 }
 @media (max-width: 768px) {
@@ -43,7 +46,9 @@
   font-weight: 300;
   line-height: 24px; /* 141.176% */
   letter-spacing: 0.34px;
-  max-width: 1040px;
+  max-width: 680px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 @media (max-width: 1440px) {
   .Lab-container h2 {
