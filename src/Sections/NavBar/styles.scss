@@ -16,10 +16,11 @@
   gap: 32px;
   a {
     color: #0e2e51;
-    font-weight: 600;
     font-size: 16px;
-    transition: 0.1s;
-    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+    letter-spacing: 0.2px;
 
     &:hover {
       color: #0e2e5156;
