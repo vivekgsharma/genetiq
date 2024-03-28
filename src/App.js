@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Hero from "./Sections/Hero";
 import Navbar from "./Sections/NavBar";
@@ -11,8 +10,8 @@ import Partner from "./Sections/Partner";
 import GeneticFooter from "./Sections/genneticFooter";
 import Bottombar from "./Sections/bottomfotter";
 import Embark from "./Sections/Embark";
-import Slideshow from "./Sections/SlideShow";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdvanceImaging from "./Sections/SlideShow/AdvanceImaging";
 
 function App() {
   return (
@@ -35,7 +34,9 @@ function App() {
           <Facilities />
         </div>
 
-        {/* <Slideshow /> */}
+        <div className="slideShow-outter-container">
+          <AdvanceImaging />
+        </div>
         <div className="lab-outter-container">
           <Lab />
         </div>
