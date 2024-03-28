@@ -37,9 +37,9 @@ function App() {
         <div className="slideShow-outter-container">
           <AdvanceImaging />
         </div>
-        <div className="lab-outter-container">
+        {/* <div className="lab-outter-container">
           <Lab />
-        </div>
+        </div> */}
         <div id="partners" className="partners-outter-container">
           <Partner />
         </div>
