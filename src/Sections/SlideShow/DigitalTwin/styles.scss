@@ -1,4 +1,4 @@
-.advanceImaging-container {
+.digitalTwin-container {
   position: relative;
   align-items: center;
   height: 700vh;
@@ -10,7 +10,7 @@
   //   position: relative;
   //   height: 500px;
   // }
-  .advanceImaging-innerContainer {
+  .digitalTwin-innerContainer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -21,16 +21,12 @@
     height: 100vh;
     padding-left: 60px;
     overflow: hidden;
-    video {
+    img {
       height: 100vh;
 
       position: absolute;
       left: -0%;
-      z-index: -2;
-    }
-
-    img {
-      width: 80%;
+      z-index: -1;
     }
   }
 

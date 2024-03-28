@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
-import explorer from "../../../Assets/imageViewer.png";
-import overlay from "../../../Assets/overlayModes.png";
-import overlayb from "../../../Assets/overlayModes2.png";
-import overlayc from "../../../Assets/overlayModes3.png";
-import overlayd from "../../../Assets/overlayModes4.png";
-import imgVideo from "../../../Assets/Explorer.mp4";
+import explorer from "../../../Assets/DigitalTwin.png";
+
+import imgVideo from "../../../Assets/labSlide.png";
 import "./styles.scss";
 
-function AdvanceImaging() {
+function DigitalTwin() {
   const container = useRef(null);
 
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -20,35 +17,34 @@ function AdvanceImaging() {
 
   const { height } = dimension;
 
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.2], [0, 0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8, 0.9], [1, 1, 0]);
   const opacityVideo = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2, 0.6, 0.7],
     [0, 0, 1, 1, 0]
   );
-
   const opacityb = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.3, 0.4],
+    [0, 0.1, 0.3, 0.6],
     [0, 0, 1, 0]
   );
-  const y = useTransform(scrollYProgress, [0.2, 0.6], [0, height * -0.5]);
-
   const opacityc = useTransform(
     scrollYProgress,
-    [0, 0.3, 0.8, 0.9],
+    [0, 0.5, 0.8, 0.9],
     [0, 1, 1, 0]
   );
+
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.8, 0.9],
+    [0, 0.3, 1, 0]
+  );
+  const y = useTransform(scrollYProgress, [0.1, 0.6], [0, height * -0.5]);
   const yB = useTransform(
     scrollYProgress,
-    [0.1, 0.5],
-    [height * 0.5, height * -0.5]
+    [0.3, 0.6],
+    [height * 0.5, height * -0.55]
   );
-
-  const opacityd = useTransform(scrollYProgress, [0.3, 0.4, 0.8], [0, 0, 1]);
-  const opacitye = useTransform(scrollYProgress, [0.3, 0.5, 0.8], [0, 0, 1]);
-  const opacityf = useTransform(scrollYProgress, [0.3, 0.6, 0.8], [0, 0, 1]);
-  const opacityg = useTransform(scrollYProgress, [0.3, 0.7, 0.8], [0, 0, 1]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -75,21 +71,14 @@ function AdvanceImaging() {
   return (
     <>
       <motion.div
-        className="advanceImaging-container"
+        className="digitalTwin-container"
         style={{ opacity: opacity }}
         ref={container}
         //  style={{ y }}
       >
-        <div className="advanceImaging-innerContainer">
-          <motion.video
-            autoPlay
-            loop
-            muted
-            disableRemotePlayback
-            style={{ opacity: opacityVideo }}
-          >
-            <source src={imgVideo} type="video/mp4" />
-          </motion.video>
+        <div className="digitalTwin-innerContainer">
+          <motion.img src={imgVideo} style={{ opacity: opacityVideo }} />
+
           <motion.div
             className="advanceImaging-text-container"
             ref={container}
@@ -98,10 +87,10 @@ function AdvanceImaging() {
             <h1>
               <span>GenetiQ:</span> Personalized Health Journey
             </h1>
-            <h2>Advance Imaging</h2>
+            <h2>Dashboard for the Twin</h2>
             <p>
-              A swift, 45-second full-body PET CT scan with Explorer technology,
-              revealing insights beyond the surface.
+              With a consultation from our expert doctors. Together, we create
+              your digital twin, unveiling a tailored lifestyle plan.
             </p>
           </motion.div>
           {/* <motion.div
@@ -116,33 +105,13 @@ function AdvanceImaging() {
           <motion.div
             className="advanceImaging-img-wrapper"
             ref={container}
-            style={{ opacity: opacityc, translateY: yB }}
+            style={{ opacity: opacityc, translateY: yB, scale: scale }}
           >
             <img src={explorer} />
-            <motion.img
-              src={overlay}
-              className="image-overlayMode"
-              style={{ opacity: opacityd }}
-            />
-            <motion.img
-              src={overlayb}
-              className="image-overlayMode"
-              style={{ opacity: opacitye }}
-            />
-            <motion.img
-              src={overlayc}
-              className="image-overlayMode"
-              style={{ opacity: opacityf }}
-            />
-            <motion.img
-              src={overlayd}
-              className="image-overlayMode"
-              style={{ opacity: opacityg }}
-            />
           </motion.div>
         </div>
       </motion.div>
     </>
   );
 }
-export default AdvanceImaging;
+export default DigitalTwin;

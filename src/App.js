@@ -12,6 +12,8 @@ import Bottombar from "./Sections/bottomfotter";
 import Embark from "./Sections/Embark";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AdvanceImaging from "./Sections/SlideShow/AdvanceImaging";
+import VRGlasses from "./Sections/SlideShow/VRGlasses";
+import DigitalTwin from "./Sections/SlideShow/DigitalTwin";
 
 function App() {
   return (
@@ -27,15 +29,17 @@ function App() {
         <div className="animatedCarousel-outter-container">
           <AnimatedCarousel />
         </div>
-        <div className="advantages-outter-container">
-          <Advantages />
-        </div>
         <div id="Facilities" className="advantages-outter-container">
           <Facilities />
+        </div>
+        <div className="advantages-outter-container">
+          <Advantages />
         </div>
 
         <div className="slideShow-outter-container">
           <AdvanceImaging />
+          <VRGlasses />
+          <DigitalTwin />
         </div>
         {/* <div className="lab-outter-container">
           <Lab />
