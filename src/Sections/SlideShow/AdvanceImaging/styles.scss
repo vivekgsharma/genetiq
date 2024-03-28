@@ -1,0 +1,104 @@
+.advanceImaging-container {
+  position: relative;
+  align-items: center;
+  height: 700vh;
+  background: #000000;
+  flex-direction: column;
+  width: 100%;
+
+  // div {
+  //   position: relative;
+  //   height: 500px;
+  // }
+  .advanceImaging-innerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+
+    height: 100vh;
+    padding-left: 60px;
+    overflow: hidden;
+    video {
+      height: 100vh;
+      margin-left: -60px;
+      position: absolute;
+      z-index: -2;
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .advanceImaging-innerContainerb {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    position: sticky;
+    top: 70vh;
+    justify-content: center;
+
+    padding-left: 60px;
+    overflow: visible;
+
+    .advanceImaging-img-wrapper {
+      position: relative;
+      display: flex;
+      width: auto;
+      margin: 0px;
+      justify-content: center;
+
+      .image-overlayMode {
+        position: absolute;
+      }
+      img {
+        width: auto;
+        max-width: 1045px;
+      }
+    }
+  }
+}
+
+.advanceImaging-text-container {
+  display: flex;
+  width: 525px;
+  text-align: left;
+  flex-direction: column;
+
+  h1 {
+    color: var(--White, #fff);
+    font-family: "SF Pro Display";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -1.44px;
+  }
+  h2 {
+    color: var(--White, #fff);
+    font-family: "SF Pro Display";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: 0.24px;
+  }
+  p {
+    color: var(--White, #fff);
+    font-family: "SF Pro Display";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 141.176% */
+    letter-spacing: 0.34px;
+  }
+  span {
+    background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

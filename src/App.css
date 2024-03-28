@@ -49,3 +49,15 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.oppener-outter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slideShow-outter-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}

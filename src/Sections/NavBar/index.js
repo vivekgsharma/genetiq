@@ -26,6 +26,7 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+    console.log()
   }, [prevScrollPos, visible, handleScroll]);
 
   return (
