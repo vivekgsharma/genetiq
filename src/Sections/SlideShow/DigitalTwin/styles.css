@@ -1,4 +1,4 @@
-.advanceImaging-container {
+.digitalTwin-container {
   position: relative;
   align-items: center;
   height: 700vh;
@@ -6,7 +6,7 @@
   flex-direction: column;
   width: 100%;
 }
-.advanceImaging-container .advanceImaging-innerContainer {
+.digitalTwin-container .digitalTwin-innerContainer {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,16 +17,13 @@
   padding-left: 60px;
   overflow: hidden;
 }
-.advanceImaging-container .advanceImaging-innerContainer video {
+.digitalTwin-container .digitalTwin-innerContainer img {
   height: 100vh;
   position: absolute;
   left: 0%;
-  z-index: -2;
+  z-index: -1;
 }
-.advanceImaging-container .advanceImaging-innerContainer img {
-  width: 80%;
-}
-.advanceImaging-container .advanceImaging-innerContainerb {
+.digitalTwin-container .advanceImaging-innerContainerb {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -36,17 +33,17 @@
   padding-left: 60px;
   overflow: visible;
 }
-.advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper {
+.digitalTwin-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper {
   position: relative;
   display: flex;
   width: auto;
   margin: 0px;
   justify-content: center;
 }
-.advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper .image-overlayMode {
+.digitalTwin-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper .image-overlayMode {
   position: absolute;
 }
-.advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper img {
+.digitalTwin-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper img {
   width: auto;
   max-width: 1200px;
 }

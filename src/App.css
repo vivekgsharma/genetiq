@@ -4,6 +4,7 @@
   text-align: center;
   width: 100%;
   flex-direction: column;
+  padding: 0px;
 }
 /* 
 .App-logo {
@@ -58,6 +59,8 @@
 
 .slideShow-outter-container {
   display: flex;
+
+  flex-direction: column;
   position: relative;
   width: 100%;
 }
