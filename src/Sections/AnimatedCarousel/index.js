@@ -37,17 +37,7 @@ function AnimatedCarousel() {
           className="gentix-continer-track"
           style={{ x, opacity: opacity }}
         >
-          <div
-            className="genetiq-item-container"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.2, type: "spring", stiffness: 500 }}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-          >
+          <div className="genetiq-item-container">
             <h1>Personalized Treatments</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
@@ -64,17 +54,7 @@ function AnimatedCarousel() {
             </p>
             <img src={twin} alt={twin} />
           </div>
-          <motion.div
-            className="genetiq-item-container"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.1, type: "spring", stiffness: 140 }}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-          >
+          <motion.div className="genetiq-item-container">
             <h1>Gene Sequencing</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
@@ -82,17 +62,7 @@ function AnimatedCarousel() {
             </p>
             <img src={machine} alt={machine} />
           </motion.div>
-          <motion.div
-            className="genetiq-item-container"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-          >
+          <motion.div className="genetiq-item-container">
             <h1>Home Testing</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
@@ -100,17 +70,7 @@ function AnimatedCarousel() {
             </p>
             <img src={test} alt={pills} />
           </motion.div>
-          <motion.div
-            className="genetiq-item-container"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
-            variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0 },
-            }}
-          >
+          <motion.div className="genetiq-item-container">
             <h1>Healthcare Interface</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced

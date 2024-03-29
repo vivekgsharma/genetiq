@@ -99,6 +99,7 @@
 }
 .genetiq-item-container p {
   color: var(--Blue, #0e2e51);
+  font-family: "Inter";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
