@@ -24,7 +24,30 @@ function GeneticFooter() {
             <div>Career</div>
           </div>
         </div> */}
+        <div className="footer-right-item3">
+          <p className="address-text">Company</p>
+          <div className="text-box-footer-right">
+            <div className="text-box-footer-right">
+              <a
+                className="hover"
+                onClick={() =>
+                  (window.location.href = "mailto:sales@prepaire.com")
+                }
+              >
+                Prepaire
+              </a>
 
+              <a
+                className="hover"
+                onClick={() =>
+                  (window.location.href = "mailto:investor@prepaire.com")
+                }
+              >
+                Appstore
+              </a>
+            </div>
+          </div>
+        </div>
         <div className="footer-right-item3">
           <p className="address-text">Contact</p>
           <div className="text-box-footer-right">

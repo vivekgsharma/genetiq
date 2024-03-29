@@ -29,9 +29,11 @@ function App() {
         <div className="animatedCarousel-outter-container">
           <AnimatedCarousel />
         </div>
+
         <div id="Facilities" className="advantages-outter-container">
           <Facilities />
         </div>
+
         <div className="advantages-outter-container">
           <Advantages />
         </div>
