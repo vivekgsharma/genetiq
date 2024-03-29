@@ -21,6 +21,10 @@
     padding-left: 60px;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      padding-left: 16px;
+    }
+
     .Vr-text-container {
       display: flex;
       text-align: left;
@@ -61,14 +65,35 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      @media (max-width: 600px) {
+        width: 90%;
+      }
     }
     .Vr-image-container {
       display: flex;
       flex-direction: column;
       margin-left: 5vw;
       overflow: hidden;
+      @media (max-width: 1160px) {
+        overflow: visible;
+      }
+      @media (max-width: 600px) {
+        overflow: visible;
+        margin-left: 0px;
+        justify-content: center;
+        position: absolute;
+        z-index: -2;
+      }
       img {
         width: 993px;
+
+        @media (max-width: 946px) {
+          width: 180%;
+        }
+
+        @media (max-width: 600px) {
+          width: 100%;
+        }
       }
     }
   }

@@ -6,6 +6,16 @@
   text-align: left;
   flex-direction: column;
 }
+@media (min-width: 1919px) {
+  .Biotune-Gentic-Advantage {
+    padding: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .Biotune-Gentic-Advantage {
+    padding: 16px;
+  }
+}
 
 .gentic-conatiner {
   display: flex;
@@ -75,19 +85,27 @@
     transform: rotateY(180deg);
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .genetiq-animated-bg {
-    right: 0px;
-    width: 90%;
+    right: 20vw;
+    width: 50%;
     top: 10%;
     transform: rotateY(180deg);
   }
 }
 @media (max-width: 540px) {
   .genetiq-animated-bg {
-    right: 0px;
-    width: 90%;
-    top: 15%;
+    right: 0vw;
+    width: 80%;
+    top: 10%;
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 478px) {
+  .genetiq-animated-bg {
+    right: 0vw;
+    width: 80%;
+    top: 12%;
     transform: rotateY(180deg);
   }
 }
@@ -115,7 +133,7 @@
     transform: rotateY(180deg);
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .genetiq-animated-bg-mask {
     right: 0px;
     width: 100%;
@@ -129,7 +147,6 @@
   flex-direction: column;
   gap: 100px;
   justify-content: center;
-  width: 50%;
 }
 @media (max-width: 1206px) {
   .left-gentic-item-box {
@@ -140,6 +157,12 @@
 .left-gentic-item-box img {
   height: 528px;
   width: 500px;
+}
+@media (max-width: 768px) {
+  .left-gentic-item-box img {
+    height: auto;
+    width: 80%;
+  }
 }
 
 .right-gentic-item-box {

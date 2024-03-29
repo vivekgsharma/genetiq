@@ -17,6 +17,11 @@
   padding-left: 60px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .advanceImaging-container .advanceImaging-innerContainer {
+    padding-left: 16px;
+  }
+}
 .advanceImaging-container .advanceImaging-innerContainer video {
   height: 100vh;
   position: absolute;
@@ -31,10 +36,15 @@
   position: relative;
   flex-direction: column;
   position: sticky;
-  top: 70vh;
+  top: 60vh;
   justify-content: center;
   padding-left: 60px;
   overflow: visible;
+}
+@media (max-width: 978px) {
+  .advanceImaging-container .advanceImaging-innerContainerb {
+    padding-left: 16px;
+  }
 }
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper {
   position: relative;
@@ -47,7 +57,7 @@
   position: absolute;
 }
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper img {
-  width: 100%;
+  width: 90%;
   max-width: 1050px;
 }
 
@@ -56,6 +66,11 @@
   width: 525px;
   text-align: left;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .advanceImaging-text-container {
+    width: 300px !important;
+  }
 }
 .advanceImaging-text-container h1 {
   color: var(--White, #fff);
