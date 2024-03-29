@@ -2,7 +2,7 @@
   display: flex;
   width: auto;
   flex-direction: row;
-  padding: 90px 50px 90px 50px;
+  padding: 50px 50px 50px 50px;
   justify-content: space-between;
   align-items: flex-start;
   z-index: 1;
