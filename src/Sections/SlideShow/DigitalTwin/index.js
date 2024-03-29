@@ -3,7 +3,7 @@ import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import explorer from "../../../Assets/DigitalTwin.png";
 
-import imgVideo from "../../../Assets/labSlide.png";
+import imgVideo from "../../../Assets/clinic-video.mp4";
 import "./styles.scss";
 
 function DigitalTwin() {
@@ -17,11 +17,11 @@ function DigitalTwin() {
 
   const { height } = dimension;
 
-  const opacity = useTransform(scrollYProgress, [0, 0.8, 0.9], [1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.94], [1, 1, 0]);
   const opacityVideo = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2, 0.6, 0.7],
-    [0, 0, 1, 1, 0]
+    [0, 0.5, 1, 1],
+    [0, 0.5, 1, 0]
   );
   const opacityb = useTransform(
     scrollYProgress,
@@ -77,7 +77,15 @@ function DigitalTwin() {
         //  style={{ y }}
       >
         <div className="digitalTwin-innerContainer">
-          <motion.img src={imgVideo} style={{ opacity: opacityVideo }} />
+          <motion.video
+            autoPlay
+            loop
+            muted
+            src={imgVideo}
+            style={{ opacity: opacityVideo }}
+          >
+            <source src />
+          </motion.video>
 
           <motion.div
             className="advanceImaging-text-container"

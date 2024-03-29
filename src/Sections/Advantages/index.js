@@ -83,13 +83,10 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">
-                User-Friendly DNA Sample Collection
-              </div>
+              <div className="heading-item2">Genome Scanning</div>
               <div className="para-item">
-                Easy-to-follow at home saliva collection with express shipping
-                options. CLIA-certified and CAP-accredited labs for sample
-                processing.
+                Order and manage GenetiQ sequencing tests seamlessly from
+                Health+plus Ancestry or GenetiQ+plus Premium services.
               </div>
             </div>
           </div>
@@ -101,14 +98,10 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">
-                Scientific Validity and Rigorous Analysis
-              </div>
+              <div className="heading-item2">Healthcare Platform</div>
               <div className="para-item">
-                FDA-cleared DNA collection kit for reliable reports and
-                genotyping on a well-established platform ensures accuracy.
-                Reports developed by experts through a rigorous scientific
-                process.
+                Order and manage GenetiQ sequencing tests seamlessly from
+                Health+plus Ancestry or GenetiQ+plus Premium services.
               </div>
             </div>
           </div>
@@ -121,12 +114,11 @@ function Advantages() {
               }}
             >
               <div className="heading-item2">
-                Comprehensive Application Features
+                Longevity & Personalized supplements
               </div>
               <div className="para-item">
-                Genetic testing, health reports, pharmacogenomics, fitness
-                insights and more. Real-time updates on genetic discoveries and
-                secure data storage.
+                Order and manage GenetiQ sequencing tests seamlessly from
+                Health+plus Ancestry or GenetiQ+plus Premium services.
               </div>
             </div>
           </div>

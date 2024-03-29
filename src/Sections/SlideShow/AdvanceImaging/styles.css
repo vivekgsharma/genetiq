@@ -47,8 +47,8 @@
   position: absolute;
 }
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper img {
-  width: auto;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1050px;
 }
 
 .advanceImaging-text-container {

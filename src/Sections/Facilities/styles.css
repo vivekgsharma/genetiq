@@ -8,8 +8,8 @@
   overflow: hidden;
   border-radius: 0px;
   object-fit: contain;
-  height: 900px;
   border-radius: 0px;
+  height: fit-content;
 }
 .facilities-outter-container .facilities-video-wrapper video {
   width: 100%;

@@ -41,9 +41,9 @@ function App() {
           <VRGlasses />
           <DigitalTwin />
         </div>
-        {/* <div className="lab-outter-container">
+        <div className="lab-outter-container">
           <Lab />
-        </div> */}
+        </div>
         <div id="partners" className="partners-outter-container">
           <Partner />
         </div>
