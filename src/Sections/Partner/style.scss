@@ -12,6 +12,12 @@
   gap: 20px;
 
   background: #fff;
+  @media (min-width: 1920px) {
+    padding: 90px 120px 30px 120px;
+  }
+  @media (max-width: 786px) {
+    padding: 90px 16px 30px 16px;
+  }
   @media (max-width: 390px) {
     padding: 90px 16px 30px 16px;
   }

@@ -15,6 +15,19 @@
   margin-top: 60px;
   text-align: left;
 
+  @media (min-width: 1920px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (max-width: 768px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   flex-direction: row;
 
   @media (max-width: 1233px) {
@@ -119,6 +132,9 @@
   height: 393px;
   overflow: hidden;
 
+  @media (max-width: 1233px) {
+    width: 100%;
+  }
   img {
     border-radius: 20px;
     object-fit: cover;

@@ -68,10 +68,13 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">GenetiQ Sequencing Test</div>
+              <div className="heading-item2">Home Testing</div>
               <div className="para-item">
-                Order and manage GenetiQ sequencing tests seamlessly from
-                Health+plus Ancestry or GenetiQ+plus Premium services.
+                Choose from our easy-to-follow home testing kits or opt for our
+                highly skilled nurses to provide in-home diagnostic services.
+                With GenetiQ, you have the flexibility to monitor your health
+                from the comfort of your own home, without compromising on
+                accuracy or quality.
               </div>
             </div>
           </div>
@@ -85,8 +88,12 @@ function Advantages() {
             >
               <div className="heading-item2">Genome Scanning</div>
               <div className="para-item">
-                Order and manage GenetiQ sequencing tests seamlessly from
-                Health+plus Ancestry or GenetiQ+plus Premium services.
+                At the heart of GenetiQ's personalized healthcare solution is
+                the GenetiQ digital twin. This digital twin serves as a dynamic
+                model of your health, incorporating your genetic makeup and
+                real-time biometric data. By continuously updating and analyzing
+                this information, we can tailor treatments and interventions to
+                your specific needs, ensuring optimal health outcomes.
               </div>
             </div>
           </div>
@@ -100,8 +107,12 @@ function Advantages() {
             >
               <div className="heading-item2">Healthcare Platform</div>
               <div className="para-item">
-                Order and manage GenetiQ sequencing tests seamlessly from
-                Health+plus Ancestry or GenetiQ+plus Premium services.
+                At the heart of GenetiQ's personalized healthcare solution is
+                the GenetiQ digital twin. This digital twin serves as a dynamic
+                model of your health, incorporating your genetic makeup and
+                real-time biometric data. By continuously updating and analyzing
+                this information, we can tailor treatments and interventions to
+                your specific needs, ensuring optimal health outcomes.
               </div>
             </div>
           </div>
@@ -117,8 +128,13 @@ function Advantages() {
                 Longevity & Personalized supplements
               </div>
               <div className="para-item">
-                Order and manage GenetiQ sequencing tests seamlessly from
-                Health+plus Ancestry or GenetiQ+plus Premium services.
+                GenetiQ pioneers personalized healthcare solutions aimed at
+                enhancing longevity and precision medicine by integrating
+                advanced diagnostics with innovative treatments. Our
+                comprehensive range of solutions, from cutting-edge diagnostics
+                to personalized supplement regimens, prioritizes your
+                well-being, recognizing that every individual's health journey
+                is unique.
               </div>
             </div>
           </div>

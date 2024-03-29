@@ -70,16 +70,17 @@ function DigitalTwin() {
         //  style={{ y }}
       >
         <div className="digitalTwin-innerContainer">
-          <motion.video
-            autoPlay
-            loop
-            muted
-            src={imgVideo}
-            style={{ opacity: opacityVideo }}
-          >
-            <source src />
-          </motion.video>
-
+          <div className="twin-videoWrapper">
+            <motion.video
+              autoPlay
+              loop
+              muted
+              src={imgVideo}
+              style={{ opacity: opacityVideo }}
+            >
+              <source src />
+            </motion.video>
+          </div>
           <motion.div
             className="advanceImaging-text-container"
             ref={container}

@@ -46,6 +46,12 @@
     padding-left: 16px;
   }
 }
+@media (max-width: 768px) {
+  .advanceImaging-container .advanceImaging-innerContainerb {
+    padding-left: 16px;
+    top: 80vh;
+  }
+}
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper {
   position: relative;
   display: flex;
