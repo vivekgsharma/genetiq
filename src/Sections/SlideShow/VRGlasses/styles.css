@@ -17,6 +17,11 @@
   padding-left: 60px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .VrGlasess-container .VrInner-container {
+    padding-left: 16px;
+  }
+}
 .VrGlasess-container .VrInner-container .Vr-text-container {
   display: flex;
   text-align: left;
@@ -56,12 +61,41 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 600px) {
+  .VrGlasess-container .VrInner-container .Vr-text-container {
+    width: 90%;
+  }
+}
 .VrGlasess-container .VrInner-container .Vr-image-container {
   display: flex;
   flex-direction: column;
   margin-left: 5vw;
   overflow: hidden;
 }
+@media (max-width: 1160px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container {
+    overflow: visible;
+  }
+}
+@media (max-width: 600px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container {
+    overflow: visible;
+    margin-left: 0px;
+    justify-content: center;
+    position: absolute;
+    z-index: -2;
+  }
+}
 .VrGlasess-container .VrInner-container .Vr-image-container img {
   width: 993px;
+}
+@media (max-width: 946px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container img {
+    width: 180%;
+  }
+}
+@media (max-width: 600px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

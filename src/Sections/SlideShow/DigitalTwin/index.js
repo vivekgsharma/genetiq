@@ -30,21 +30,14 @@ function DigitalTwin() {
   );
   const opacityc = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.8, 0.9],
+    [0, 0.3, 0.8, 0.9],
     [0, 1, 1, 0]
   );
 
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.8, 0.9],
-    [0, 0.3, 1, 0]
-  );
+  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
   const y = useTransform(scrollYProgress, [0.1, 0.6], [0, height * -0.5]);
-  const yB = useTransform(
-    scrollYProgress,
-    [0.3, 0.6],
-    [height * 0.5, height * -0.55]
-  );
+  const yB = useTransform(scrollYProgress, [0.1, 0.6], [0, height * -0.5]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -109,9 +102,9 @@ function DigitalTwin() {
             <img src={explorer} />
           </motion.div> */}
         </div>
-        <div className="advanceImaging-innerContainerb">
+        <div className="twin-innerContainerb">
           <motion.div
-            className="advanceImaging-img-wrapper"
+            className="twin-img-wrapper"
             ref={container}
             style={{ opacity: opacityc, translateY: yB, scale: scale }}
           >

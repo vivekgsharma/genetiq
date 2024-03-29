@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import image from "../../Assets/lifesaver.jpg";
+import image from "../../Assets/lifesaver.png";
 import "./styles.scss";
 
 function Hero() {

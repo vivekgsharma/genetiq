@@ -22,6 +22,10 @@
     padding-left: 60px;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+
     video {
       height: 100vh;
 
@@ -31,7 +35,7 @@
     }
   }
 
-  .advanceImaging-innerContainerb {
+  .twin-innerContainerb {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -40,21 +44,19 @@
     justify-content: center;
 
     padding-left: 60px;
-    overflow: visible;
 
-    .advanceImaging-img-wrapper {
+    .twin-img-wrapper {
       position: relative;
       display: flex;
       width: auto;
       margin: 0px;
       justify-content: center;
 
-      .image-overlayMode {
+      .twin-overlayMode {
         position: absolute;
       }
       img {
-        width: auto;
-        max-width: 1200px;
+        height: 100vh;
       }
     }
   }
@@ -65,6 +67,9 @@
   width: 525px;
   text-align: left;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 300px !important;
+  }
 
   h1 {
     color: var(--White, #fff);

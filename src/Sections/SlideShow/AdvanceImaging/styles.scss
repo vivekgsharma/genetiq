@@ -21,6 +21,9 @@
     height: 100vh;
     padding-left: 60px;
     overflow: hidden;
+    @media (max-width: 768px) {
+      padding-left: 16px;
+    }
     video {
       height: 100vh;
 
@@ -39,11 +42,15 @@
     position: relative;
     flex-direction: column;
     position: sticky;
-    top: 70vh;
+    top: 60vh;
     justify-content: center;
 
     padding-left: 60px;
     overflow: visible;
+
+    @media (max-width: 978px) {
+      padding-left: 16px;
+    }
 
     .advanceImaging-img-wrapper {
       position: relative;
@@ -56,7 +63,7 @@
         position: absolute;
       }
       img {
-        width: 100%;
+        width: 90%;
         max-width: 1050px;
       }
     }
@@ -68,7 +75,9 @@
   width: 525px;
   text-align: left;
   flex-direction: column;
-
+  @media (max-width: 768px) {
+    width: 300px !important;
+  }
   h1 {
     color: var(--White, #fff);
 
