@@ -20,11 +20,11 @@ function AnimatedCarousel() {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-100%"]);
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.99, 1],
-    [0, 1, 1, 0]
+    [1, 1, 1, 0]
   );
 
   return (
@@ -33,15 +33,13 @@ function AnimatedCarousel() {
         <motion.div className="gentiq-Text" style={{ opacity: opacity }}>
           Enter GenetiQ
         </motion.div>
-        <motion.div
-          className="gentix-continer-track"
-          style={{ x, opacity: opacity }}
-        >
+        <motion.div className="gentix-continer-track" style={{ x }}>
           <div className="genetiq-item-container">
-            <h1>Personalized Treatments</h1>
+            <h1>Personalized Healthcare Solutions</h1>
             <p>
-              Pioneer personalized healthcare solutions, integrating advanced
-              diagnostics and innovative treatments for precision medicine
+              Personalized healthcare with advanced diagnostics and treatments,
+              emphasizing longevity and precision medicine, tailored to each
+              individual's unique health journey.
             </p>
             <img src={pills} alt={pills} />
           </div>
@@ -49,24 +47,28 @@ function AnimatedCarousel() {
           <div className="genetiq-item-container">
             <h1>Digital Twin</h1>
             <p>
-              Pioneer personalized healthcare solutions, integrating advanced
-              diagnostics and innovative treatments for precision medicine.
+              At the core of GenetiQ's healthcare approach, the digital twin
+              integrates genetic and real-time biometric data to customize
+              treatments for optimal health outcomes.
             </p>
             <img src={twin} alt={twin} />
           </div>
           <motion.div className="genetiq-item-container">
-            <h1>Gene Sequencing</h1>
+            <h1>Data Storage and Security</h1>
             <p>
-              Pioneer personalized healthcare solutions, integrating advanced
-              diagnostics and innovative treatments for precision medicine.
+              GenetiQ employs advanced encryption protocols to protect sensitive
+              health data, ensuring privacy and compliance with industry
+              standards, allowing patients to focus on their health with peace
+              of mind.
             </p>
             <img src={machine} alt={machine} />
           </motion.div>
           <motion.div className="genetiq-item-container">
-            <h1>Home Testing</h1>
+            <h1>Healthcare Interface</h1>
             <p>
-              Pioneer personalized healthcare solutions, integrating advanced
-              diagnostics and innovative treatments for precision medicine.
+              With GenetiQ, you have the flexibility to monitor your health from
+              the comfort of your own home, without compromising on accuracy or
+              quality.
             </p>
             <img src={test} alt={pills} />
           </motion.div>

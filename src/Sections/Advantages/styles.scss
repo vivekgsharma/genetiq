@@ -68,18 +68,21 @@
     transform: rotateY(180deg);
   }
   @media (max-width: 768px) {
+    display: none;
     right: 20vw;
-    width: 50%;
+    width: 30%;
     top: 10%;
     transform: rotateY(180deg);
   }
   @media (max-width: 540px) {
+    display: none;
     right: 0vw;
     width: 80%;
     top: 10%;
     transform: rotateY(180deg);
   }
   @media (max-width: 478px) {
+    display: none;
     right: 0vw;
     width: 80%;
     top: 12%;

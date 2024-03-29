@@ -12,6 +12,24 @@
   text-align: left;
   flex-direction: row;
 }
+@media (min-width: 1920px) {
+  .Bitoutne-Embark {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .Bitoutne-Embark {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .Bitoutne-Embark {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 @media (max-width: 1233px) {
   .Bitoutne-Embark {
     flex-direction: column-reverse;
@@ -108,6 +126,11 @@
   width: 50%;
   height: 393px;
   overflow: hidden;
+}
+@media (max-width: 1233px) {
+  .Embark-conatiner-right {
+    width: 100%;
+  }
 }
 .Embark-conatiner-right img {
   border-radius: 20px;
