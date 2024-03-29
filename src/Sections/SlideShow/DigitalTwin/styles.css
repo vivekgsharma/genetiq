@@ -17,7 +17,7 @@
   padding-left: 60px;
   overflow: hidden;
 }
-.digitalTwin-container .digitalTwin-innerContainer img {
+.digitalTwin-container .digitalTwin-innerContainer video {
   height: 100vh;
   position: absolute;
   left: 0%;

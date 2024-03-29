@@ -5,19 +5,15 @@
 .facilities-outter-container .facilities-video-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   border-radius: 0px;
-  object-fit: contain;
-  height: 900px;
+  height: fit-content;
   border-radius: 0px;
 }
 .facilities-outter-container .facilities-video-wrapper video {
   width: 100%;
-}
-@media (max-width: 1439px) {
-  .facilities-outter-container .facilities-video-wrapper {
-    height: 380px;
-  }
+  object-fit: cover;
 }
 @media (max-width: 768px) {
   .facilities-outter-container .facilities-video-wrapper {
