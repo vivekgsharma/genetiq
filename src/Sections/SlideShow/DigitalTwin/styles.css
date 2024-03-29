@@ -13,9 +13,15 @@
   position: sticky;
   top: 0;
   justify-content: center;
+  overflow: visible;
   height: 100vh;
   padding-left: 60px;
-  overflow: hidden;
+}
+@media (max-width: 1440px) {
+  .digitalTwin-container .digitalTwin-innerContainer {
+    padding: 16px;
+    overflow: hidden;
+  }
 }
 @media (max-width: 768px) {
   .digitalTwin-container .digitalTwin-innerContainer {
@@ -23,10 +29,17 @@
   }
 }
 .digitalTwin-container .digitalTwin-innerContainer video {
-  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
   position: absolute;
   left: 0%;
   z-index: -1;
+}
+@media (max-width: 1440px) {
+  .digitalTwin-container .digitalTwin-innerContainer video {
+    width: auto;
+    height: 150%;
+  }
 }
 .digitalTwin-container .twin-innerContainerb {
   display: flex;

@@ -18,19 +18,31 @@
     top: 0;
     justify-content: center;
 
+    overflow: visible;
     height: 100vh;
     padding-left: 60px;
-    overflow: hidden;
-
+    @media (max-width: 1440px) {
+      padding: 16px;
+      overflow: hidden;
+    }
     @media (max-width: 768px) {
       padding: 16px;
     }
 
     video {
-      height: 100vh;
+      width: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      @media (max-width: 1440px) {
+        width: auto;
+        height: 150%;
+      }
 
       position: absolute;
-      left: -0%;
+      left: 0%;
       z-index: -1;
     }
   }
