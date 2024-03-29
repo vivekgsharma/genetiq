@@ -1,7 +1,5 @@
 .Lab-container {
   position: relative;
-  height: 50vw;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +7,13 @@
   margin-top: 20px;
   overflow: hidden;
   gap: 24px;
+  padding: 60px;
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .Lab-container {
+    padding: 16px;
+  }
 }
 .Lab-container h1 {
   color: var(--Blue, #0e2e51);
@@ -70,6 +75,6 @@
 .Lab-container .lab-img-wrapper img {
   width: 100%;
   max-width: 1920px;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */
