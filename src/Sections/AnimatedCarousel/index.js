@@ -1,6 +1,11 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-
+import { useEffect, useRef } from "react";
+import {
+  motion,
+  useTransform,
+  useScroll,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 import pills from "../../Assets/caro-a.png";
 import twin from "../../Assets/caro-b.png";
 import machine from "../../Assets/caro-c.png";
@@ -14,8 +19,13 @@ function AnimatedCarousel() {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-43%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+
+  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-65%"]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.99, 1],
+    [0, 1, 1, 0]
+  );
 
   return (
     <div className="enter-genetiq-container" ref={targetRef}>
@@ -27,7 +37,17 @@ function AnimatedCarousel() {
           className="gentix-continer-track"
           style={{ x, opacity: opacity }}
         >
-          <div className="genetiq-item-container">
+          <div
+            className="genetiq-item-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.2, type: "spring", stiffness: 500 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
             <h1>Personalized Treatments</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
@@ -44,30 +64,60 @@ function AnimatedCarousel() {
             </p>
             <img src={twin} alt={twin} />
           </div>
-          <div className="genetiq-item-container">
+          <motion.div
+            className="genetiq-item-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.1, type: "spring", stiffness: 140 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
             <h1>Gene Sequencing</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
               diagnostics and innovative treatments for precision medicine.
             </p>
             <img src={machine} alt={machine} />
-          </div>
-          <div className="genetiq-item-container">
+          </motion.div>
+          <motion.div
+            className="genetiq-item-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
             <h1>Home Testing</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
               diagnostics and innovative treatments for precision medicine.
             </p>
             <img src={test} alt={pills} />
-          </div>
-          <div className="genetiq-item-container">
+          </motion.div>
+          <motion.div
+            className="genetiq-item-container"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 200 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
             <h1>Healthcare Interface</h1>
             <p>
               Pioneer personalized healthcare solutions, integrating advanced
               diagnostics and innovative treatments for precision medicine.
             </p>
             <img src={hearth} alt={hearth} />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </div>
