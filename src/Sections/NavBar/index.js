@@ -26,7 +26,7 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-    console.log()
+    console.log();
   }, [prevScrollPos, visible, handleScroll]);
 
   return (
@@ -35,17 +35,17 @@ function Navbar() {
         <img src={logo} />
       </div>
       <div className="Navbar-action-container">
-        <HashLink to={"/#about"} smooth={true}>
-          About
-        </HashLink>
-        <HashLink to={"/#Facilities"} smooth={true}>
-          Facilities
+        <HashLink to={"/#advantages"} smooth={true}>
+          Advantages
         </HashLink>
         <HashLink to={"/#journey"} smooth={true}>
           Journey
         </HashLink>
         <HashLink to={"/#partners"} smooth={true}>
           Partners
+        </HashLink>
+        <HashLink to={"/#contact"} smooth={true}>
+          Contact
         </HashLink>
       </div>
     </div>

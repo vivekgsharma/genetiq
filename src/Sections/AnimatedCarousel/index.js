@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useTransform,
@@ -6,21 +6,22 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
-import pills from "../../Assets/caro-a.png";
-import twin from "../../Assets/caro-b.png";
-import machine from "../../Assets/caro-c.png";
-import test from "../../Assets/caro-d.png";
-import hearth from "../../Assets/caro-e.png";
+import pills from "../../Assets/Pills.mp4";
+import twin from "../../Assets/Twin.mp4";
+import machine from "../../Assets/Sequence.mp4";
+import test from "../../Assets/DNA.mp4";
+import hearth from "../../Assets/Heart.mp4";
 
 import "./styles.scss";
 
 function AnimatedCarousel() {
+  const [windowHeight, setWindowHeight] = useState(0);
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["-0%", "-100%"]);
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.99, 1],
@@ -30,55 +31,61 @@ function AnimatedCarousel() {
   return (
     <div className="enter-genetiq-container" ref={targetRef}>
       <div className="enter-genetiq-innerContainer">
-        <motion.div className="gentiq-Text" style={{ opacity: opacity }}>
-          Enter GenetiQ
-        </motion.div>
+        <motion.div className="gentiq-Text">Enter GenetiQ</motion.div>
         <motion.div className="gentix-continer-track" style={{ x }}>
           <div className="genetiq-item-container">
-            <h1>Personalized Healthcare Solutions</h1>
+            <h1>Next-Generation Healthcare</h1>
             <p>
-              Personalized healthcare with advanced diagnostics and treatments,
-              emphasizing longevity and precision medicine, tailored to each
-              individual's unique health journey.
+              Explore advanced diagnosis and treatment technology, powered by
+              Genetiq's state-of-the-art equipment
             </p>
-            <img src={pills} alt={pills} />
+            <video autoPlay loop muted>
+              <source src={pills} type="video/mp4" />
+            </video>
           </div>
 
           <div className="genetiq-item-container">
+            <h1>Personalized Healthcare Solutions: </h1>
+            <p>
+              Individualized wellness is achieved through the fusion of
+              cutting-edge blood and genome sequencing, enabling the creation of
+              custom-tailored supplement regimens.
+            </p>
+            <video autoPlay loop muted>
+              <source src={machine} type="video/mp4" />
+            </video>
+          </div>
+          <motion.div className="genetiq-item-container">
             <h1>Digital Twin</h1>
             <p>
               At the core of GenetiQ's healthcare approach, the digital twin
               integrates genetic and real-time biometric data to customize
               treatments for optimal health outcomes.
             </p>
-            <img src={twin} alt={twin} />
-          </div>
-          <motion.div className="genetiq-item-container">
-            <h1>Data Storage and Security</h1>
-            <p>
-              GenetiQ employs advanced encryption protocols to protect sensitive
-              health data, ensuring privacy and compliance with industry
-              standards, allowing patients to focus on their health with peace
-              of mind.
-            </p>
-            <img src={machine} alt={machine} />
+            <video autoPlay loop muted>
+              <source src={twin} type="video/mp4" />
+            </video>
           </motion.div>
           <motion.div className="genetiq-item-container">
-            <h1>Healthcare Interface</h1>
+            <h1>Home Testing</h1>
             <p>
-              With GenetiQ, you have the flexibility to monitor your health from
-              the comfort of your own home, without compromising on accuracy or
-              quality.
+              GenetiQ offers convenient home testing kits or in-home diagnostic
+              services by skilled nurses, ensuring accurate and comfortable
+              monitoring of health from your own home.
             </p>
-            <img src={test} alt={pills} />
+            <video autoPlay loop muted>
+              <source src={test} type="video/mp4" />
+            </video>
           </motion.div>
           <motion.div className="genetiq-item-container">
-            <h1>Healthcare Interface</h1>
+            <h1>Healthcare Solutions</h1>
             <p>
-              Pioneer personalized healthcare solutions, integrating advanced
-              diagnostics and innovative treatments for precision medicine.
+              GenetiQ is a platform offering personalized drugs and custom
+              supplements tailored to individuals' unique genomic profiles.
             </p>
-            <img src={hearth} alt={hearth} />
+            <video autoPlay loop muted style={{ paddingBottom: "-48px" }}>
+              <source src={hearth} type="video/mp4" />
+            </video>
           </motion.div>
         </motion.div>
       </div>
