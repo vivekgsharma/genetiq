@@ -2,18 +2,21 @@
   display: flex;
   width: auto;
   padding: 50px;
-  padding-top: 0px;
+  padding-top: 90px;
   padding-bottom: 0px;
   gap: 32px;
-  margin-top: 50px;
-  width: auto;
+  margin-top: 0px;
+  height: fit-content;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
 @media (min-width: 1919px) {
   .enter-genetiq-container {
-    padding: 120px;
+    padding: 50px;
+    padding-top: 90px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 @media (max-width: 768px) {
@@ -29,9 +32,8 @@
   flex-direction: column;
   gap: 32px;
   align-items: flex-start;
-  position: sticky;
+  position: relative;
   overflow: hidden;
-  top: 16vh;
 }
 
 .gentiq-Text {

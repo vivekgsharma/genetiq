@@ -53,7 +53,7 @@
 
 .animatedCarousel-outter-container {
   display: flex;
-
+  height: fit-content;
   flex-direction: column;
   position: relative;
   width: 100%;
