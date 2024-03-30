@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import explorer from "../../../Assets/DigitalTwin.png";
-
+import twinVideo from "../../../Assets/genetiQ-Video1080.mp4";
 import imgVideo from "../../../Assets/clinic-video.mp4";
 import "./styles.scss";
 
@@ -28,16 +28,27 @@ function DigitalTwin() {
     [0, 0.1, 0.3, 0.6],
     [0, 0, 1, 0]
   );
-  const opacityc = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.8, 0.9],
-    [0, 1, 1, 0]
-  );
 
   const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const y = useTransform(scrollYProgress, [0.1, 0.6], [0, height * -0.5]);
-  const yB = useTransform(scrollYProgress, [0.1, 0.6], [0, height * -0.5]);
+  const yB = useTransform(
+    scrollYProgress,
+    [0.3, 0.7, 0.9, 1],
+    [0, height * -0.6, height * -0.7, height * -1]
+  );
+
+  const yC = useTransform(
+    scrollYProgress,
+    [0.5, 0.5, 0.9, 1],
+    [0, height * -0.9, height * -0.8, height * -1]
+  );
+
+  const opacityc = useTransform(
+    scrollYProgress,
+    [0, 0.3, 0.5, 1],
+    [0, 0, 1, 1]
+  );
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -105,12 +116,30 @@ function DigitalTwin() {
         </div>
         <div className="twin-innerContainerb">
           <motion.div
-            className="twin-img-wrapper"
+            className="advanceImaging-text-container"
             ref={container}
-            style={{ opacity: opacityc, translateY: yB, scale: scale }}
+            style={{ translateY: yB, opacity: opacityc }}
           >
-            <img src={explorer} />
+            <h1>
+              <span>GenetiQ:</span> Personalized Health Journey
+            </h1>
+            <h2>GenetiQ's VR Health Hub</h2>
+            <p>
+              Compatible with Apple Vision Pro and Meta, seamlessly integrates
+              genetics, blood diagnostics, and biometrics for personalized
+              wellness. It offers tailored guidance, doctor consultation, and
+              immersive education to optimize your health journey.
+            </p>
           </motion.div>
+          <motion.video
+            autoPlay
+            loop
+            muted
+            disableRemotePlayback
+            style={{ translateY: yB, opacity: opacityc }}
+          >
+            <source src={twinVideo} type="video/mp4" />
+          </motion.video>
         </div>
       </motion.div>
     </>
