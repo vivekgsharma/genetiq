@@ -9,26 +9,36 @@
 @media (min-width: 1920px) {
   .opener-container {
     padding: 120px;
+    padding-bottom: 0px;
+    padding-top: 90px;
   }
 }
 @media (max-width: 1919px) {
   .opener-container {
     padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 1440px) {
   .opener-container {
     padding: 50px;
+    padding-bottom: 0px;
+    padding-top: 90px;
   }
 }
 @media (max-width: 1439px) {
   .opener-container {
     padding: 16px;
+    padding-bottom: 0px;
+    padding-top: 90px;
   }
 }
 @media (max-width: 390px) {
   .opener-container {
     padding: 16px;
+    padding-bottom: 0px;
+    padding-top: 90px;
   }
 }
 .opener-container h1 {
