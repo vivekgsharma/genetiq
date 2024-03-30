@@ -10,7 +10,7 @@
   .opener-container {
     padding: 120px;
     padding-bottom: 0px;
-    padding-top: 90px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 1919px) {
@@ -24,21 +24,21 @@
   .opener-container {
     padding: 50px;
     padding-bottom: 0px;
-    padding-top: 90px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 1439px) {
   .opener-container {
     padding: 16px;
     padding-bottom: 0px;
-    padding-top: 90px;
+    padding-top: 50px;
   }
 }
 @media (max-width: 390px) {
   .opener-container {
     padding: 16px;
     padding-bottom: 0px;
-    padding-top: 90px;
+    padding-top: 50px;
   }
 }
 .opener-container h1 {

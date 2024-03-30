@@ -101,7 +101,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media (max-width: 1439px) {
+@media (max-width: 768px) {
   .digitalTwin-container .twin-innerContainerb {
     padding-left: 16px;
   }
@@ -111,12 +111,24 @@
   height: 60vh;
   border-radius: 20px;
   margin: 60px;
+  margin-right: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1049px) {
   .digitalTwin-container .twin-innerContainerb video {
-    width: 90vw;
-    margin: 16px;
+    margin: 0px;
+    padding: 0px;
     height: auto;
+    height: auto;
+    width: 92%;
+  }
+}
+@media (max-width: 780px) {
+  .digitalTwin-container .twin-innerContainerb video {
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    height: auto;
+    width: 92%;
   }
 }
 .digitalTwin-container .twin-img-wrapper {
