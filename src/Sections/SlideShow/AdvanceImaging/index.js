@@ -20,7 +20,7 @@ function AdvanceImaging() {
 
   const { height } = dimension;
 
-  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.2], [0, 0, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.1, 0.2], [0.5, 1, 1]);
   const opacityVideo = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2, 0.6, 0.7],

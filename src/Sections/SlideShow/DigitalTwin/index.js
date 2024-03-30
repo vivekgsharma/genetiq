@@ -17,11 +17,11 @@ function DigitalTwin() {
 
   const { height } = dimension;
 
-  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.94], [1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85, 0.94], [1, 1, 1]);
   const opacityVideo = useTransform(
     scrollYProgress,
-    [0, 0.5, 1, 1],
-    [0, 0.5, 1, 0]
+    [0, 0.5, 0.7, 1],
+    [0, 0.9, 0.7, 0]
   );
   const opacityb = useTransform(
     scrollYProgress,
@@ -123,7 +123,7 @@ function DigitalTwin() {
             style={{ translateY: yB, opacity: opacityc }}
           >
             <h1>
-              <span>GenetiQ:</span>Future of Helathcare
+              <span>GenetiQ:</span>Future of Helthcare
             </h1>
             <h2>GenetiQ's VR Health Hub</h2>
             <p>

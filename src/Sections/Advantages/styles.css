@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 90px 50px 60px 50px;
+  padding: 0px 50px 90px 50px;
   text-align: left;
   flex-direction: column;
 }
@@ -158,8 +158,8 @@
   }
 }
 .left-gentic-item-box img {
-  height: 528px;
-  width: 500px;
+  height: 572px;
+  width: 630px;
 }
 @media (max-width: 768px) {
   .left-gentic-item-box img {
@@ -172,7 +172,6 @@
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 50%;
 }
 @media (max-width: 1206px) {
   .right-gentic-item-box {
