@@ -98,12 +98,14 @@ function DigitalTwin() {
             style={{ opacity: opacityb, translateY: y }}
           >
             <h1>
-              <span>GenetiQ:</span> Personalized Health Journey
+              <span>GenetiQ:</span>A New Era of Wellness Learning
             </h1>
             <h2>Dashboard for the Twin</h2>
             <p>
-              With a consultation from our expert doctors. Together, we create
-              your digital twin, unveiling a tailored lifestyle plan.
+              Step into our virtual clinic for personalized wellness and
+              educational experiences. Get tailored treatments, track progress,
+              and access genetic insights to take control of your health
+              journey.
             </p>
           </motion.div>
           {/* <motion.div
@@ -121,7 +123,7 @@ function DigitalTwin() {
             style={{ translateY: yB, opacity: opacityc }}
           >
             <h1>
-              <span>GenetiQ:</span> Personalized Health Journey
+              <span>GenetiQ:</span>Future of Helathcare
             </h1>
             <h2>GenetiQ's VR Health Hub</h2>
             <p>
