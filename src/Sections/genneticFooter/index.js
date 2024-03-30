@@ -30,20 +30,9 @@ function GeneticFooter() {
             <div className="text-box-footer-right">
               <a
                 className="hover"
-                onClick={() =>
-                  (window.location.href = "mailto:sales@prepaire.com")
-                }
+                onClick={() => (window.location.href = "wwww.prepaire.com")}
               >
                 Prepaire
-              </a>
-
-              <a
-                className="hover"
-                onClick={() =>
-                  (window.location.href = "mailto:investor@prepaire.com")
-                }
-              >
-                Appstore
               </a>
             </div>
           </div>
