@@ -49,7 +49,11 @@
   flex-direction: row;
   gap: 10px;
   width: fit-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 600s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 .gentix-continer-items {
   width: fit-content;
@@ -69,7 +73,6 @@
     }
   }
 }
-
 .genetiq-item-container {
   display: flex;
   padding: 24px;
@@ -78,15 +81,22 @@
   align-items: center;
   gap: 12px;
   flex: 1 0 0;
+  justify-content: space-between;
   align-self: stretch;
   text-align: left;
   width: 274px;
-  height: 292px;
+  height: 324px;
   overflow: hidden !important;
   border-radius: 20px;
   border: 1px solid rgba(14, 46, 81, 0.1);
   align-items: flex-start;
-
+  div {
+    display: flex;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   @media (max-width: 650px) {
     width: 274px;
     height: 292px;
@@ -96,7 +106,6 @@
 
     margin-left: -24px;
     margin-right: -24px;
-    margin-bottom: -24px;
   }
   h1 {
     color: var(--Blue, #0e2e51);
@@ -111,12 +120,23 @@
     text-align: left;
   }
   p {
-    color: var(--Gray, #6d6d6d);
+    color: var(--Medium-Grey-Paragraphs, #6d6d6d);
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 130%; /* 20.8p
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }
 
