@@ -89,13 +89,13 @@ function VRGlasses() {
             ref={container}
           >
             <h1>
-              <span>GenetiQ:</span> Personalized Health Journey
+              <span>GenetiQ:</span> GenetiQ's VR Health Hub
             </h1>
             <h2>Your Personal Vision</h2>
             <p>
-              To bring this vision to life at home, choose between a
-              complimentary Apple Vision Pro VR headset or Meta Quest 3,
-              enriching your experience with the GenetiQ app.
+              Compatible with Apple Vision Pro and Meta, GenetiQ seamlessly
+              integrates genetics, blood diagnostics, and biometrics for
+              personalized wellness.
             </p>
           </motion.div>
           <div className="Vr-image-container">
