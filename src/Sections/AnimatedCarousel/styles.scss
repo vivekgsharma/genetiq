@@ -2,7 +2,7 @@
   display: flex;
   width: auto;
   padding: 50px;
-  padding-top: 90px;
+  padding-top: 50px;
   padding-bottom: 0px;
   gap: 32px;
   margin-top: 0px;
@@ -13,12 +13,13 @@
   flex-direction: column;
   @media (min-width: 1919px) {
     padding: 50px;
-    padding-top: 90px;
+    padding-top: 50px;
     padding-left: 120px;
     padding-right: 120px;
   }
   @media (max-width: 768px) {
     padding: 16px;
+    padding-top: 50px;
   }
 }
 
@@ -34,7 +35,7 @@
 }
 .gentiq-Text {
   color: var(--Blue, #0e2e51);
-  text-align: center;
+  text-align: left;
 
   font-size: 48px;
   font-style: normal;
@@ -44,14 +45,11 @@
 }
 .gentix-continer-track {
   display: flex;
+  position: relative;
   flex-direction: row;
   gap: 10px;
   width: fit-content;
-
-  &:hover .gentix-continer-items {
-    cursor: pointer;
-    animation-play-state: paused;
-  }
+  animation: scroll 20s linear infinite;
 }
 .gentix-continer-items {
   width: fit-content;
@@ -90,8 +88,8 @@
   align-items: flex-start;
 
   @media (max-width: 650px) {
-    width: 300px;
-    height: 540px;
+    width: 274px;
+    height: 292px;
   }
   video {
     width: 330px;
@@ -119,5 +117,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }

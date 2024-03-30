@@ -1,21 +1,23 @@
 .Lab-container {
-  position: relative;
   display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 100%;
   align-items: center;
   justify-content: center;
+  background-image: url(../../Assets/Lab.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Lab-container .text-clinic-container {
+  display: flex;
   flex-direction: column;
-  margin-top: 0px;
-  overflow: hidden;
-  gap: 24px;
-  padding: 60px;
-  height: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-top: 50px;
 }
-@media (max-width: 768px) {
-  .Lab-container {
-    padding: 16px;
-  }
-}
-.Lab-container h1 {
+.Lab-container .text-clinic-container h1 {
   color: var(--Blue, #0e2e51);
   text-align: center;
   font-size: 60px;
@@ -27,23 +29,23 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.Lab-container h1 span {
+.Lab-container .text-clinic-container h1 span {
   background: linear-gradient(180deg, #0e2e51 0%, #a8d7fa 121.67%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1440px) {
-  .Lab-container h1 {
+  .Lab-container .text-clinic-container h1 {
     font-size: 60px;
   }
 }
 @media (max-width: 768px) {
-  .Lab-container h1 {
-    font-size: 40px;
+  .Lab-container .text-clinic-container h1 {
+    font-size: 30px;
   }
 }
-.Lab-container h2 {
+.Lab-container .text-clinic-container h2 {
   color: #0e2e51;
   text-align: center;
   font-size: 17px;
@@ -56,25 +58,21 @@
   margin-bottom: 0px;
 }
 @media (max-width: 1440px) {
-  .Lab-container h2 {
+  .Lab-container .text-clinic-container h2 {
     font-size: 15px;
   }
 }
-@media (max-width: 1440px) {
-  .Lab-container {
-    height: 50vw;
+@media (max-width: 768px) {
+  .Lab-container .text-clinic-container h2 {
+    font-size: 15px;
   }
 }
 .Lab-container .lab-img-wrapper {
-  display: flex;
   position: absolute;
-  overflow: hidden;
-  height: fit-content;
   z-index: -1;
+  position: relative;
+  width: 100vw;
 }
 .Lab-container .lab-img-wrapper img {
   width: 100%;
-  max-width: 1920px;
-  height: auto;
-  object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */

@@ -72,3 +72,8 @@
   position: relative;
   width: 100%;
 }
+
+.lab-outter-container {
+  display: flex;
+  width: 100%;
+}

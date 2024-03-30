@@ -13,7 +13,7 @@ import bgMask from "../../Assets/radialbgMask.png";
 import "./styles.scss";
 
 function Advantages() {
-  const [currentImage, setCurrentImage] = useState(Gentimacine);
+  const [currentImage, setCurrentImage] = useState(Gentimacineb);
   const [angle, setAngle] = useState(0);
   const { ref, inView } = useInView({
     triggerOnce: true, // The animation will only run once

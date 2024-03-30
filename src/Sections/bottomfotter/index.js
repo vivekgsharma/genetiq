@@ -40,7 +40,7 @@ function Bottombar() {
       </div>
 
       <div className="copyright-text">
-        Copyright © 2024 GenetiQ Inc. All rights reserved.
+        Copyright © 2024 Prepaire Labs Inc. All rights reserved.
       </div>
     </div>
   );

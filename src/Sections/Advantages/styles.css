@@ -2,19 +2,22 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 90px 50px 90px 50px;
+  padding: 50px 50px 50px 50px;
   text-align: left;
   flex-direction: column;
 }
 @media (min-width: 1919px) {
   .Biotune-Gentic-Advantage {
     padding: 120px;
-    padding-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 768px) {
   .Biotune-Gentic-Advantage {
     padding: 16px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 

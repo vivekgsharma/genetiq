@@ -2,7 +2,7 @@
   display: flex;
   width: auto;
   padding: 50px;
-  padding-top: 90px;
+  padding-top: 50px;
   padding-bottom: 0px;
   gap: 32px;
   margin-top: 0px;
@@ -14,7 +14,7 @@
 @media (min-width: 1919px) {
   .enter-genetiq-container {
     padding: 50px;
-    padding-top: 90px;
+    padding-top: 50px;
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -22,6 +22,7 @@
 @media (max-width: 768px) {
   .enter-genetiq-container {
     padding: 16px;
+    padding-top: 50px;
   }
 }
 
@@ -38,7 +39,7 @@
 
 .gentiq-Text {
   color: var(--Blue, #0e2e51);
-  text-align: center;
+  text-align: left;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -48,13 +49,11 @@
 
 .gentix-continer-track {
   display: flex;
+  position: relative;
   flex-direction: row;
   gap: 10px;
   width: fit-content;
-}
-.gentix-continer-track:hover .gentix-continer-items {
-  cursor: pointer;
-  animation-play-state: paused;
+  animation: scroll 20s linear infinite;
 }
 
 .gentix-continer-items {
@@ -94,8 +93,8 @@
 }
 @media (max-width: 650px) {
   .genetiq-item-container {
-    width: 300px;
-    height: 540px;
+    width: 274px;
+    height: 292px;
   }
 }
 .genetiq-item-container video {
@@ -123,4 +122,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Assuming duplicated items, this moves the track by half its full width */
+  }
 }/*# sourceMappingURL=styles.css.map */
