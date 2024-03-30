@@ -20,7 +20,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="Hero-outter-container">
+        <div id="hero" className="Hero-outter-container">
           <Hero />
         </div>
         <div id="about" className="oppener-outter-container">
