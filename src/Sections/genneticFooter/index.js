@@ -1,5 +1,6 @@
 import "./style.scss";
 import GneticLogoFooter from "../../Assets/genticlogofooter.svg";
+import { Link } from "react-router-dom";
 
 function GeneticFooter() {
   return (
@@ -28,12 +29,9 @@ function GeneticFooter() {
           <p className="address-text">Company</p>
           <div className="text-box-footer-right">
             <div className="text-box-footer-right">
-              <a
-                className="hover"
-                onClick={() => (window.location.href = "wwww.prepaire.com")}
-              >
+              <Link className="bootom-btn" to="https://www.prepaire.com">
                 Prepaire
-              </a>
+              </Link>
             </div>
           </div>
         </div>

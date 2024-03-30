@@ -31,9 +31,12 @@ function Navbar() {
 
   return (
     <div className="Navbar-container" style={{ top: visible ? "0" : "-65px" }}>
-      <div className="logo-wrapper">
-        <img src={logo} />
-      </div>
+      <HashLink to={"/#hero"} smooth={true}>
+        <div className="logo-wrapper">
+          <img src={logo} />
+        </div>
+      </HashLink>
+
       <div className="Navbar-action-container">
         <HashLink to={"/#advantages"} smooth={true}>
           Advantages
