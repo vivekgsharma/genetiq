@@ -34,11 +34,11 @@ function App() {
           <Facilities />
         </div>
 
-        <div className="advantages-outter-container">
+        <div id="advantages" className="advantages-outter-container">
           <Advantages />
         </div>
 
-        <div className="slideShow-outter-container">
+        <div id="journey" className="slideShow-outter-container">
           <AdvanceImaging />
           <VRGlasses />
           <DigitalTwin />
@@ -49,10 +49,10 @@ function App() {
         <div id="partners" className="partners-outter-container">
           <Partner />
         </div>
-        <div id="journey" className="partners-outter-container">
+        <div className="partners-outter-container">
           <Embark />
         </div>
-        <div className="footer-outter-container">
+        <div id="contact" className="footer-outter-container">
           <GeneticFooter />
           <Bottombar />
         </div>
