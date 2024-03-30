@@ -64,7 +64,7 @@ function Advantages() {
             <div
               className="gentic-item-inner"
               onMouseEnter={() => {
-                setImage(Gentimacine);
+                setImage(Gentimacineb);
                 rotateImage();
               }}
             >
@@ -81,7 +81,7 @@ function Advantages() {
             <div
               className="gentic-item-inner"
               onMouseEnter={() => {
-                setImage(Gentimacineb);
+                setImage(Gentimacinec);
                 rotateImage();
               }}
             >
@@ -96,7 +96,7 @@ function Advantages() {
             <div
               className="gentic-item-inner"
               onMouseEnter={() => {
-                setImage(Gentimacinec);
+                setImage(Gentimacined);
                 rotateImage();
               }}
             >
@@ -113,7 +113,7 @@ function Advantages() {
             <div
               className="gentic-item-inner"
               onMouseEnter={() => {
-                setImage(Gentimacined);
+                setImage(Gentimacine);
                 rotateImage();
               }}
             >
