@@ -29,7 +29,7 @@ function Advantages() {
 
   return (
     <div className="Biotune-Gentic-Advantage">
-      <div>
+      {/* <div>
         <img
           className="genetiq-animated-bg-mask"
           src={bgMask}
@@ -47,7 +47,7 @@ function Advantages() {
           src={bg}
           alt="background"
         />
-      </div>
+      </div> */}
       <div className="gentic-advan-heading">GenetiQ Advantages</div>
       <div className="gentic-conatiner">
         <motion.div
@@ -68,13 +68,12 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">Home Testing</div>
+              <div className="heading-item2">
+                Quality Testing Made Affordable
+              </div>
               <div className="para-item">
-                Choose from our easy-to-follow home testing kits or opt for our
-                highly skilled nurses to provide in-home diagnostic services.
-                With GenetiQ, you have the flexibility to monitor your health
-                from the comfort of your own home, without compromising on
-                accuracy or quality.
+                Most advanced genomic sequencing and blood tests at unbeatable
+                prices thanks to partnerships with leading diagnostic firms.
               </div>
             </div>
           </div>
@@ -86,14 +85,10 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">Genome Scanning</div>
+              <div className="heading-item2">Discover Your Health Journey</div>
               <div className="para-item">
-                At the heart of GenetiQ's personalized healthcare solution is
-                the GenetiQ digital twin. This digital twin serves as a dynamic
-                model of your health, incorporating your genetic makeup and
-                real-time biometric data. By continuously updating and analyzing
-                this information, we can tailor treatments and interventions to
-                your specific needs, ensuring optimal health outcomes.
+                Accessed through web, app, and VR, users get detailed analysis
+                and tailored recommendations for better health.
               </div>
             </div>
           </div>
@@ -105,14 +100,12 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">Healthcare Platform</div>
+              <div className="heading-item2">
+                Longevity & Personalized Supplements{" "}
+              </div>
               <div className="para-item">
-                At the heart of GenetiQ's personalized healthcare solution is
-                the GenetiQ digital twin. This digital twin serves as a dynamic
-                model of your health, incorporating your genetic makeup and
-                real-time biometric data. By continuously updating and analyzing
-                this information, we can tailor treatments and interventions to
-                your specific needs, ensuring optimal health outcomes.
+                Personalized healthcare for longevity and precision medicine,
+                merging advanced diagnostics with innovative treatments.
               </div>
             </div>
           </div>
@@ -124,17 +117,12 @@ function Advantages() {
                 rotateImage();
               }}
             >
-              <div className="heading-item2">
-                Longevity & Personalized supplements
-              </div>
+              <div className="heading-item2">Data Storage and Security</div>
               <div className="para-item">
-                GenetiQ pioneers personalized healthcare solutions aimed at
-                enhancing longevity and precision medicine by integrating
-                advanced diagnostics with innovative treatments. Our
-                comprehensive range of solutions, from cutting-edge diagnostics
-                to personalized supplement regimens, prioritizes your
-                well-being, recognizing that every individual's health journey
-                is unique.
+                Our advanced encryption protocols safeguard your information
+                during collection, transmission, and storage, meeting
+                industry-leading standards to ensure your privacy and peace of
+                mind as you prioritize your health and well-being.
               </div>
             </div>
           </div>
