@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
 
   background-size: cover;
+
   .text-clinic-container {
     display: flex;
     flex-direction: column;
@@ -16,6 +17,11 @@
     align-items: center;
     gap: 12px;
     padding-top: 50px;
+
+    @media (max-width: 786px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
     h1 {
       color: var(--Blue, #0e2e51);
       text-align: center;
@@ -62,7 +68,7 @@
         font-size: 15px;
       }
       @media (max-width: 768px) {
-        font-size: 15px;
+        font-size: 12px;
       }
     }
   }
