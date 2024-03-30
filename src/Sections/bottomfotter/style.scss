@@ -51,7 +51,11 @@
     letter-spacing: 0.34px;
   }
 }
-
+.terms-holder {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
 .copyright-text {
   color: #fff;
 
