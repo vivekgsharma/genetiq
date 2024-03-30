@@ -86,6 +86,7 @@ function DigitalTwin() {
               autoPlay
               loop
               muted
+              playsInline
               src={imgVideo}
               style={{ opacity: opacityVideo }}
             >
@@ -137,6 +138,7 @@ function DigitalTwin() {
             autoPlay
             loop
             muted
+            playsInline
             disableRemotePlayback
             style={{ translateY: yB, opacity: opacityc }}
           >

@@ -82,6 +82,7 @@ function AdvanceImaging() {
       >
         <div className="advanceImaging-innerContainer">
           <motion.video
+            playsInline
             autoPlay
             loop
             muted
