@@ -17,6 +17,12 @@
   gap: 12px;
   padding-top: 50px;
 }
+@media (max-width: 786px) {
+  .Lab-container .text-clinic-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .Lab-container .text-clinic-container h1 {
   color: var(--Blue, #0e2e51);
   text-align: center;
@@ -64,7 +70,7 @@
 }
 @media (max-width: 768px) {
   .Lab-container .text-clinic-container h2 {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 .Lab-container .lab-img-wrapper {
