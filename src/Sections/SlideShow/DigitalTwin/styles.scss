@@ -68,9 +68,11 @@
       width: 525px;
       text-align: left;
       flex-direction: column;
+
       @media (max-width: 768px) {
-        width: 300px !important;
+        width: 100%;
       }
+
       h1 {
         color: var(--White, #fff);
 
@@ -163,7 +165,7 @@
   text-align: left;
   flex-direction: column;
   @media (max-width: 768px) {
-    width: 300px !important;
+    width: 100%;
   }
 
   h1 {

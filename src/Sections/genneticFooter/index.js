@@ -10,7 +10,7 @@ function GeneticFooter() {
       </div>
 
       <div className="footer-right-container">
-        <div className="footer-right-item">
+        <div className="footer-right-item1">
           <p className="address-text">Address</p>
           <div className="text-box-footer-right">
             Prepaire Global Holdings IRENA Building - Masdar City Abu Dhabi
@@ -25,7 +25,7 @@ function GeneticFooter() {
             <div>Career</div>
           </div>
         </div> */}
-        <div className="footer-right-item3">
+        <div className="footer-right-item2">
           <p className="address-text">Company</p>
           <div className="text-box-footer-right">
             <div className="text-box-footer-right">

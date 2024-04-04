@@ -155,6 +155,6 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%); /* Assuming duplicated items, this moves the track by half its full width */
+    transform: translateX(0%); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }/*# sourceMappingURL=styles.css.map */

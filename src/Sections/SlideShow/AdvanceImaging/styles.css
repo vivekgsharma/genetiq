@@ -24,6 +24,7 @@
 }
 .advanceImaging-container .advanceImaging-innerContainer video {
   height: 100vh;
+  display: flex;
   position: absolute;
   left: 0%;
   z-index: -2;
@@ -72,11 +73,6 @@
   width: 525px;
   text-align: left;
   flex-direction: column;
-}
-@media (max-width: 768px) {
-  .advanceImaging-text-container {
-    width: 300px !important;
-  }
 }
 .advanceImaging-text-container h1 {
   color: var(--White, #fff);

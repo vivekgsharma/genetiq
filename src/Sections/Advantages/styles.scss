@@ -25,7 +25,7 @@
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
-  padding-top: 48px;
+  padding-top: 24px;
   @media (max-width: 1260px) {
     justify-content: flex-start;
   }
@@ -124,17 +124,12 @@
   gap: 100px;
   justify-content: center;
 
-  @media (max-width: 1206px) {
-    width: 100%;
-    max-width: 500px;
-  }
   img {
-    height: 572px;
-    width: 630px;
-
+    width: 570px;
+    height: 552px;
     @media (max-width: 768px) {
-      height: auto;
-      width: 80%;
+      width: 285px;
+      height: 276px;
     }
   }
 }

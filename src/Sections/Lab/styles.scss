@@ -7,9 +7,11 @@
   justify-content: center;
   background-image: url(../../Assets/Lab.png);
   background-repeat: no-repeat;
-
+  background-position: 50%;
   background-size: cover;
-
+  @media (max-width: 390px) {
+    background-position: 30%;
+  }
   .text-clinic-container {
     display: flex;
     flex-direction: column;
@@ -47,33 +49,41 @@
       }
 
       @media (max-width: 768px) {
-        font-size: 30px;
+        font-size: 40px;
       }
     }
     h2 {
       color: #0e2e51;
 
-      text-align: center;
+      color: #0e2e51;
 
+      text-align: center;
+      font-family: Inter;
       font-size: 17px;
       font-style: normal;
-      font-weight: 300;
-      line-height: 24px; /* 141.176% */
-      letter-spacing: 0.34px;
+      font-weight: 400;
+      line-height: 24px;
       max-width: 680px;
-      margin-top: 0px;
-      margin-bottom: 0px;
 
       @media (max-width: 1440px) {
         font-size: 15px;
       }
       @media (max-width: 768px) {
-        font-size: 12px;
+        color: #0e2e51;
+
+        text-align: center;
+        font-family: Inter;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
       }
     }
   }
 
   .lab-img-wrapper {
+    display: flex;
+    justify-content: center;
     position: absolute;
     z-index: -1;
     position: relative;
