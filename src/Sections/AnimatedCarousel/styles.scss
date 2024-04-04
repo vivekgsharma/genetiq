@@ -150,7 +150,7 @@
   }
   100% {
     transform: translateX(
-      -100%
+      0%
     ); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }

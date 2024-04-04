@@ -56,7 +56,6 @@
   height: fit-content;
   flex-direction: column;
   position: relative;
-  width: 100%;
 }
 
 .oppener-outter-container {
@@ -70,12 +69,10 @@
 
   flex-direction: column;
   position: relative;
-  width: 100%;
 }
 
 .lab-outter-container {
   display: flex;
-  width: 100%;
 }
 
 a {

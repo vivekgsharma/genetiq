@@ -68,7 +68,7 @@
 }
 @media (max-width: 768px) {
   .digitalTwin-container .twin-innerContainerb .advanceImaging-text-container {
-    width: 300px !important;
+    width: 100%;
   }
 }
 .digitalTwin-container .twin-innerContainerb .advanceImaging-text-container h1 {
@@ -159,7 +159,7 @@
 }
 @media (max-width: 768px) {
   .advanceImaging-text-container {
-    width: 300px !important;
+    width: 100%;
   }
 }
 .advanceImaging-text-container h1 {

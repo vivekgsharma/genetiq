@@ -25,9 +25,9 @@ function Opener() {
         <motion.div
           ref={ref}
           className="opener-tittlea-container"
-          initial={{ x: -200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 2, velocity: 2.5 }}
+          // initial={{ x: -200, opacity: 0 }}
+          // animate={{ x: 0, opacity: 1 }}
+          // transition={{ delay: 2, velocity: 2.5 }}
         >
           <img src={logo} alt="genetiq" />
           <h1>Revolutionizing Personalized Healthcare</h1>
@@ -35,9 +35,9 @@ function Opener() {
         <motion.div
           ref={ref}
           className="opener-tittleb-container"
-          initial={{ x: 200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 2, velocity: 2.5 }}
+          // initial={{ x: 200, opacity: 0 }}
+          // animate={{ x: 0, opacity: 1 }}
+          // transition={{ delay: 2, velocity: 2.5 }}
         >
           <h1>Discover Your Path to Optimal Wellbeing</h1>
           <img src={circle} alt="genetiq" />
