@@ -133,12 +133,11 @@
   @media (max-width: 500px) {
     width: auto;
   }
-  video {
-    width: 330px;
 
+  img {
+    width: 330px;
     margin-left: -24px;
     margin-right: -24px;
-
     @media (max-width: 500px) {
       width: 120%;
       margin-left: -24px;

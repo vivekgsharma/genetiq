@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 import { useMotionValue, animate, motion } from "framer-motion";
-import pills from "../../Assets/Pills.mov";
-import twin from "../../Assets/Twin.mov";
-import machine from "../../Assets/Sequence.mov";
-import test from "../../Assets/DNA.mov";
-import hearth from "../../Assets/Heart.mov";
+import pills from "../../Assets/pills.png";
+import twin from "../../Assets/DigitalTwin.png";
+import machine from "../../Assets/Sequence.png";
+import test from "../../Assets/DNA.png";
+import hearth from "../../Assets/Heart.png";
 
 import "./styles.scss";
 
@@ -72,9 +72,7 @@ function AnimatedCarousel() {
                   by Genetiq's state-of-the-art equipment
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={pills} type="video/mp4" />
-              </video>
+              <img src={pills} alt="pills" />
             </div>
             <div
               className="genetiq-item-container"
@@ -88,9 +86,7 @@ function AnimatedCarousel() {
                   creation of custom-tailored supplement regimens.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={machine} type="video/mp4" />
-              </video>
+              <img src={machine} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -101,9 +97,7 @@ function AnimatedCarousel() {
                   treatments for optimal health outcomes.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={twin} type="video/mp4" />
-              </video>
+              <img src={twin} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -114,9 +108,7 @@ function AnimatedCarousel() {
                   from your own home.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={test} type="video/mp4" />
-              </video>
+              <img src={test} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -126,9 +118,7 @@ function AnimatedCarousel() {
                   supplements tailored to individuals' unique genomic profiles.
                 </p>
               </div>
-              <video playsInline loop muted style={{ paddingBottom: "-48px" }}>
-                <source src={hearth} type="video/mp4" />
-              </video>
+              <img src={hearth} alt="pills" />
             </div>
           </div>
           <div className="gentix-continer-trackB">
@@ -140,9 +130,7 @@ function AnimatedCarousel() {
                   by Genetiq's state-of-the-art equipment
                 </p>
               </div>
-              <video loop muted>
-                <source src={pills} type="video/mp4" />
-              </video>
+              <img src={test} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -153,9 +141,7 @@ function AnimatedCarousel() {
                   creation of custom-tailored supplement regimens.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={machine} type="video/mp4" />
-              </video>
+              <img src={hearth} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -166,9 +152,7 @@ function AnimatedCarousel() {
                   treatments for optimal health outcomes.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={twin} type="video/mp4" />
-              </video>
+              <img src={twin} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -179,9 +163,7 @@ function AnimatedCarousel() {
                   from your own home.
                 </p>
               </div>
-              <video playsInline loop muted>
-                <source src={test} type="video/mp4" />
-              </video>
+              <img src={test} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -191,9 +173,7 @@ function AnimatedCarousel() {
                   supplements tailored to individuals' unique genomic profiles.
                 </p>
               </div>
-              <video playsInline loop muted style={{ paddingBottom: "-48px" }}>
-                <source src={hearth} type="video/mp4" />
-              </video>
+              <img src={pills} alt="pills" />
             </div>
           </div>
         </motion.div>
@@ -210,9 +190,7 @@ function AnimatedCarousel() {
                   by Genetiq's state-of-the-art equipment
                 </p>
               </div>
-              <video autoPlay={false} playsInline loop>
-                <source src={pills} type="video/mp4" />
-              </video>
+              <img src={pills} alt="pills" />
             </div>
             <div
               className="genetiq-item-container"
@@ -226,9 +204,7 @@ function AnimatedCarousel() {
                   creation of custom-tailored supplement regimens.
                 </p>
               </div>
-              <video playsInline loop>
-                <source src={machine} type="video/mp4" />
-              </video>
+              <img src={machine} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -239,9 +215,7 @@ function AnimatedCarousel() {
                   treatments for optimal health outcomes.
                 </p>
               </div>
-              <video playsInline loop>
-                <source src={twin} type="video/mp4" />
-              </video>
+              <img src={twin} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -252,9 +226,7 @@ function AnimatedCarousel() {
                   from your own home.
                 </p>
               </div>
-              <video playsInline loop>
-                <source src={test} type="video/mp4" />
-              </video>
+              <img src={test} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -264,9 +236,7 @@ function AnimatedCarousel() {
                   supplements tailored to individuals' unique genomic profiles.
                 </p>
               </div>
-              <video playsInline loop style={{ paddingBottom: "-48px" }}>
-                <source src={hearth} type="video/mp4" />
-              </video>
+              <img src={hearth} alt="pills" />
             </div>
           </div>
         </motion.div>
