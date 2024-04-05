@@ -210,7 +210,7 @@ function AnimatedCarousel() {
                   by Genetiq's state-of-the-art equipment
                 </p>
               </div>
-              <video playsInline loop muted>
+              <video autoPlay={false} playsInline loop muted>
                 <source src={pills} type="video/mp4" />
               </video>
             </div>
@@ -226,7 +226,7 @@ function AnimatedCarousel() {
                   creation of custom-tailored supplement regimens.
                 </p>
               </div>
-              <video playsInline loop muted>
+              <video autoPlay={false} playsInline loop muted>
                 <source src={machine} type="video/mp4" />
               </video>
             </div>
@@ -239,7 +239,7 @@ function AnimatedCarousel() {
                   treatments for optimal health outcomes.
                 </p>
               </div>
-              <video playsInline loop muted>
+              <video autoPlay={false} playsInline loop muted>
                 <source src={twin} type="video/mp4" />
               </video>
             </div>
@@ -252,7 +252,7 @@ function AnimatedCarousel() {
                   from your own home.
                 </p>
               </div>
-              <video playsInline loop muted>
+              <video autoPlay={false} playsInline loop muted>
                 <source src={test} type="video/mp4" />
               </video>
             </div>
@@ -264,7 +264,13 @@ function AnimatedCarousel() {
                   supplements tailored to individuals' unique genomic profiles.
                 </p>
               </div>
-              <video playsInline loop muted style={{ paddingBottom: "-48px" }}>
+              <video
+                autoPlay={false}
+                playsInline
+                loop
+                muted
+                style={{ paddingBottom: "-48px" }}
+              >
                 <source src={hearth} type="video/mp4" />
               </video>
             </div>
