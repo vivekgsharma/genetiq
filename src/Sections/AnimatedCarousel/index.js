@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import useMeasure from "react-use-measure";
 import { useMotionValue, animate, motion } from "framer-motion";
-import pills from "../../Assets/Pills.mp4";
-import twin from "../../Assets/Twin.mp4";
-import machine from "../../Assets/Sequence.mp4";
-import test from "../../Assets/DNA.mp4";
-import hearth from "../../Assets/Heart.mp4";
+import pills from "../../Assets/Pills.mov";
+import twin from "../../Assets/Twin.mov";
+import machine from "../../Assets/Sequence.mov";
+import test from "../../Assets/DNA.mov";
+import hearth from "../../Assets/Heart.mov";
 
 import "./styles.scss";
 
