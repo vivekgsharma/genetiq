@@ -58,6 +58,7 @@
   display: flex;
   width: auto;
   margin: 0px;
+  margin-left: -16px;
   justify-content: center;
 }
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper .image-overlayMode {

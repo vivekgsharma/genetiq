@@ -22,6 +22,12 @@
     padding-left: 16px;
   }
 }
+@media (max-width: 1156px) {
+  .VrGlasess-container .VrInner-container {
+    padding-left: 16px;
+    width: 100%;
+  }
+}
 .VrGlasess-container .VrInner-container .Vr-text-container {
   display: flex;
   text-align: left;
@@ -30,6 +36,12 @@
   position: sticky;
   height: fit-content;
   top: 0;
+}
+@media (max-width: 768px) {
+  .VrGlasess-container .VrInner-container .Vr-text-container {
+    width: auto;
+    max-width: 525px;
+  }
 }
 .VrGlasess-container .VrInner-container .Vr-text-container h1 {
   color: var(--White, #fff);
@@ -77,7 +89,7 @@
     overflow: visible;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1156px) {
   .VrGlasess-container .VrInner-container .Vr-image-container {
     overflow: visible;
     margin-left: 0px;

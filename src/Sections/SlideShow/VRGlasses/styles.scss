@@ -25,6 +25,11 @@
       padding-left: 16px;
     }
 
+    @media (max-width: 1156px) {
+      padding-left: 16px;
+      width: 100%;
+    }
+
     .Vr-text-container {
       display: flex;
       text-align: left;
@@ -33,6 +38,11 @@
       position: sticky;
       height: fit-content;
       top: 0;
+
+      @media (max-width: 768px) {
+        width: auto;
+        max-width: 525px;
+      }
 
       h1 {
         color: var(--White, #fff);
@@ -77,7 +87,7 @@
       @media (max-width: 1160px) {
         overflow: visible;
       }
-      @media (max-width: 600px) {
+      @media (max-width: 1156px) {
         overflow: visible;
         margin-left: 0px;
         justify-content: center;
@@ -86,7 +96,7 @@
       }
       img {
         width: 993px;
-        
+
         @media (max-width: 946px) {
           width: 180%;
         }
