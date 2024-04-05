@@ -125,7 +125,7 @@
   align-self: stretch;
   text-align: left;
   width: 274px;
-  height: 324px;
+  height: 316px;
   overflow: hidden !important;
   border-radius: 20px;
   border: 1px solid rgba(14, 46, 81, 0.1);
@@ -143,13 +143,13 @@
     width: auto;
   }
 }
-.genetiq-item-container video {
+.genetiq-item-container img {
   width: 330px;
   margin-left: -24px;
   margin-right: -24px;
 }
 @media (max-width: 500px) {
-  .genetiq-item-container video {
+  .genetiq-item-container img {
     width: 120%;
     margin-left: -24px;
     margin-right: -24px;
