@@ -49,10 +49,43 @@
   flex-direction: row;
   gap: 10px;
   width: fit-content;
-  animation: scroll 600s linear infinite;
 
-  &:hover {
-    animation-play-state: paused;
+  // animation: scroll 20s linear infinite;
+}
+
+.gentix-continer-trackMobile {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  gap: 10px;
+  width: fit-content;
+  // animation: scroll 20s linear infinite;
+
+  @media (max-width: 500px) {
+    display: flex;
+  }
+}
+
+.gentix-continer-trackB {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  width: fit-content;
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.gentix-continer-trackBMobile {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  width: fit-content;
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 .gentix-continer-items {
@@ -97,9 +130,8 @@
     flex-direction: column;
     gap: 12px;
   }
-  @media (max-width: 768px) {
-    width: 274px;
-    height: 180px;
+  @media (max-width: 500px) {
+    width: auto;
   }
   video {
     width: 330px;
@@ -107,10 +139,13 @@
     margin-left: -24px;
     margin-right: -24px;
 
-    @media (max-width: 768px) {
-      display: none;
+    @media (max-width: 500px) {
+      width: 120%;
+      margin-left: -24px;
+      margin-right: -24px;
     }
   }
+
   h1 {
     color: var(--Blue, #0e2e51);
     /* Heading 5 */
@@ -150,7 +185,18 @@
   }
   100% {
     transform: translateX(
-      0%
+      -100%
+    ); /* Assuming duplicated items, this moves the track by half its full width */
+  }
+}
+
+@keyframes scrollB {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(
+      -100%
     ); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }
