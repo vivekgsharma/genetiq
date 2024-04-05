@@ -42,7 +42,7 @@ function AdvanceImaging() {
   const yB = useTransform(
     scrollYProgress,
     [0.1, 0.5],
-    [height * 0.5, height * -0.5]
+    [height * 0.5, height * -0.35]
   );
 
   const opacityd = useTransform(scrollYProgress, [0.3, 0.4, 0.8], [0, 0, 1]);
