@@ -135,11 +135,11 @@
   }
 
   img {
-    width: 330px;
+    width: 323px;
     margin-left: -24px;
-    margin-right: -24px;
+
     @media (max-width: 500px) {
-      width: 120%;
+      width: calc(100% + 48px);
       margin-left: -24px;
       margin-right: -24px;
     }
