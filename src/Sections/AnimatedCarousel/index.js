@@ -130,7 +130,7 @@ function AnimatedCarousel() {
                   by Genetiq's state-of-the-art equipment
                 </p>
               </div>
-              <img src={test} alt="pills" />
+              <img src={pills} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -141,7 +141,7 @@ function AnimatedCarousel() {
                   creation of custom-tailored supplement regimens.
                 </p>
               </div>
-              <img src={hearth} alt="pills" />
+              <img src={machine} alt="pills" />
             </div>
             <div className="genetiq-item-container">
               <div>
@@ -173,7 +173,7 @@ function AnimatedCarousel() {
                   supplements tailored to individuals' unique genomic profiles.
                 </p>
               </div>
-              <img src={pills} alt="pills" />
+              <img src={hearth} alt="pills" />
             </div>
           </div>
         </motion.div>
