@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import explorer from "../../../Assets/imageViewer.png";
+import explorerMobile from "../../../Assets/advanceImageMobile.png";
 import overlay from "../../../Assets/overlayModes.png";
 import overlayb from "../../../Assets/overlayModes2.png";
 import overlayc from "../../../Assets/overlayModes3.png";
@@ -11,8 +12,8 @@ import "./styles.scss";
 
 function AdvanceImaging() {
   const container = useRef(null);
-
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  const [advanceImagingPic, setAdvanceImagingPic] = useState("explorer");
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -49,6 +50,20 @@ function AdvanceImaging() {
   const opacitye = useTransform(scrollYProgress, [0.3, 0.5, 0.8], [0, 0, 1]);
   const opacityf = useTransform(scrollYProgress, [0.3, 0.6, 0.8], [0, 0, 1]);
   const opacityg = useTransform(scrollYProgress, [0.3, 0.7, 0.8], [0, 0, 1]);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -113,35 +128,47 @@ function AdvanceImaging() {
             <img src={explorer} />
           </motion.div> */}
         </div>
-        <div className="advanceImaging-innerContainerb">
-          <motion.div
-            className="advanceImaging-img-wrapper"
-            ref={container}
-            style={{ opacity: opacityc, translateY: yB }}
-          >
-            <img src={explorer} />
-            <motion.img
-              src={overlay}
-              className="image-overlayMode"
-              style={{ opacity: opacityd }}
-            />
-            <motion.img
-              src={overlayb}
-              className="image-overlayMode"
-              style={{ opacity: opacitye }}
-            />
-            <motion.img
-              src={overlayc}
-              className="image-overlayMode"
-              style={{ opacity: opacityf }}
-            />
-            <motion.img
-              src={overlayd}
-              className="image-overlayMode"
-              style={{ opacity: opacityg }}
-            />
-          </motion.div>
-        </div>
+        {windowWidth < 768 ? (
+          <div className="advanceImaging-innerContainerb">
+            <motion.div
+              className="advanceImaging-img-wrapper"
+              ref={container}
+              style={{ opacity: opacityc, translateY: yB }}
+            >
+              <img src={explorerMobile} />
+            </motion.div>
+          </div>
+        ) : (
+          <div className="advanceImaging-innerContainerb">
+            <motion.div
+              className="advanceImaging-img-wrapper"
+              ref={container}
+              style={{ opacity: opacityc, translateY: yB }}
+            >
+              <img src={explorer} />
+              <motion.img
+                src={overlay}
+                className="image-overlayMode"
+                style={{ opacity: opacityd }}
+              />
+              <motion.img
+                src={overlayb}
+                className="image-overlayMode"
+                style={{ opacity: opacitye }}
+              />
+              <motion.img
+                src={overlayc}
+                className="image-overlayMode"
+                style={{ opacity: opacityf }}
+              />
+              <motion.img
+                src={overlayd}
+                className="image-overlayMode"
+                style={{ opacity: opacityg }}
+              />
+            </motion.div>
+          </div>
+        )}
       </motion.div>
     </>
   );
