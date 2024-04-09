@@ -1,0 +1,751 @@
+openapi: 3.0.0
+
+info:
+  version: 0.1.0
+  title: "Prepaire Auth - Public API"
+  description: "REST API for Auth"
+  termsOfService: ""
+  contact:
+    email: "contact@prepairelabs.com"
+
+servers:
+  - url: "http://localhost:{hostPort}/{apiVersion}"
+    variables:
+      hostPort:
+        enum:
+          - "5000"
+        default: "5000"
+      apiVersion:
+        enum:
+          - v1
+        default: v1
+  - url: "https://{apiServerSubdomain}.prepairelabs.com/{apiVersion}"
+    variables:
+      apiServerSubdomain:
+        enum:
+          - api
+        default: api
+      apiVersion:
+        enum:
+          - v1
+        default: v1
+
+tags:
+  - name: auth
+    description: Actions relating to user signup & authentication
+  - name: profile
+    description: Actions relating to user profiles
+  - name: admin
+    description: Actions relating to admin capabilities
+
+paths:
+  /auth/signup:
+    post:
+      tags:
+        - auth
+      operationId: authSignupCreate
+      summary: Sign up
+      description: New signup request.  Upon success, confirmation email is sent, whereby user must confirm their email by clicking email link.
+      requestBody:
+        description: The pass and conf fields should match.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  example: "Your Name"
+                email:
+                  example: "admin@prepaire.com"
+                pass:
+                  format: password
+                  example: PA$$Word123
+              required:
+              - name
+              - email
+              - pass
+      responses:
+        201:
+          $ref: "#/components/responses/SignupSuccess"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        409:
+          $ref: "#/components/responses/ConflictSignupEmailDuplicate"
+  
+  /auth/email/verify/signup:
+    parameters:
+    - in: query
+      name: token
+      schema:
+        example: "eyJhbGc.eyJle.9zZalsd23lsfj"
+      required: true
+      description: JWT
+    
+    put:
+      tags:
+      - auth
+      operationId: authEmailVerifySignup
+      summary: Confirm account email after signup
+      description: Confirms account email after signup.  This operation will fail if user account is blocked.
+      responses:
+        200:
+          $ref: "#/components/responses/AuthLoginRefreshSuccess"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+          
+  /auth/email/verify/signup/resend:
+    post:
+      tags:
+      - auth
+      operationId: authEmailVerifySignupResend
+      summary: Request verification email message sent again to verify email upon signup
+      description: Request verification email message sent again to verify email upon signup.  This operation will only be successful if user email has never been verified.  This operation will fail if user account is blocked.
+      security:
+      - bearerTokenAuth: [ ]
+      responses:
+        200:
+          description: email sent
+          content:
+            application/json:
+              schema:
+                properties:
+                  msg:
+                    type: string
+                    example: verification email sent
+        409:
+          $ref: "#/components/responses/ConflictAlreadyVerified"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+  
+  /auth/pass:
+    put:
+      tags:
+        - auth
+      operationId: authPasswordUpdate
+      summary: Password Update
+      description: "Update password for currently authenticated user.  Updated password cannot match current password.  This operation will not affect the open auth session.  This operation will fail if user account is blocked."
+      security:
+      - bearerTokenAuth: [ ]
+      requestBody:
+        description: The pass and conf fields should match.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                pass:
+                  type: string
+                  format: password
+                  example: PA$$Word123
+                passConf:
+                  type: string
+                  format: password
+                  example: PA$$Word123
+              required:
+                - pass
+                - passConf
+      responses:
+        200:
+          $ref: "#/components/responses/AuthPasswordUpdateSuccess"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+          
+  /auth/pass/forgot:
+    post:
+      tags:
+        - auth
+      operationId: authPasswordForgotRequestCreate
+      summary: Create Forgot Password Request
+      description: "Create forgot password request for user with given email.  If user exists, email will be sent with a link to login.  No other changes to user account happen at this time."
+      requestBody:
+        description: Email of user who forgot password
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  format: email
+                  example: foo@prepairelabs.com
+              required:
+                - email
+      responses:
+        200:
+          $ref: "#/components/responses/AuthPasswordForgotReceived"
+        400:
+          $ref: "#/components/responses/BadRequest"
+  
+  /auth/pass/forgot/verify:
+    parameters:
+    - in: query
+      name: token
+      schema:
+        example: "eyJhbGc.eyJle.9zZalsd23lsfj"
+      required: true
+      description: JWT
+    
+    put:
+      tags:
+      - auth
+      operationId: authPassForgotVerify
+      summary: Confirm forgot password login
+      description: "Confirm forgot password login.  This operation will log user in and flag account for password change.  This operation will fail if user account is blocked."
+      responses:
+        200:
+          $ref: "#/components/responses/AuthLoginRefreshSuccess"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+  
+  /auth/login:
+    post:
+      tags:
+        - auth
+      operationId: authLoginCreate
+      summary: Login
+      description: "New login request.  This operation will create a new auth session for user if no open session exists.  If an open session exists, it will be extended.  This operation will fail if user account is blocked."
+      requestBody:
+        description: The username and password.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  example: "admin@prepaire.com"
+                pass:
+                  format: password
+                  example: PA$$Word123
+                
+              required:
+              - email
+              - pass
+      responses:
+        200:
+          $ref: "#/components/responses/AuthLoginRefreshSuccess"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+  
+  /auth/refresh:
+    post:
+      tags:
+        - auth
+      operationId: authRefreshCreate
+      summary: Auth Refresh
+      description: "Refresh auth session, which provides a new auth token for use in other authenticated requests.  This does not extend the current auth session.  This operation will fail if user account is blocked."
+      security:
+      - bearerTokenRefresh: [ ]
+      responses:
+        200:
+          $ref: "#/components/responses/AuthLoginRefreshSuccess"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+
+  /auth/profile:
+    get:
+      tags:
+        - profile
+      operationId: authProfileGet
+      summary: Get Profile
+      description: "Get profile for currently authenticated user."
+      security:
+      - bearerTokenAuth: [ ]
+      responses:
+        200:
+          $ref: "#/components/responses/AuthProfile"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+          
+    put:
+      tags:
+        - profile
+      operationId: authProfileUpdate
+      summary: Profile Update
+      description: "Update user profile for currently authenticated user."
+      security:
+      - bearerTokenAuth: [ ]
+      requestBody:
+        description: Profile fields to update.  No particular field is required but at least one of the fields must be provided
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  example: John Smith
+                company:
+                  example: Prepaire Labs, Inc.
+                phone:
+                  example: "987-654-3210"
+                dob:
+                  format: date
+                nationality:
+                  example: USA
+                passport:
+                  type: string
+                  example: "123456789"
+      responses:
+        200:
+          $ref: "#/components/responses/AuthProfile"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+          
+  /auth/profile/email/change:
+    post:
+      tags:
+        - profile
+      operationId: authEmailChangeRequestCreate
+      summary: Create Email Change Request
+      description: "Create email change request. Both email and email conf values should match.  Email must be different from current email.  This operation will result in a confirmation email being sent to the new email.  Only after client confirmation will the email change go into effect."
+      security:
+      - bearerTokenAuth: [ ]
+      requestBody:
+        description: The respective email and conf fields should match.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  format: email
+                emailConf:
+                  format: email
+              required:
+              - email
+              - emailConf
+      responses:
+        200:
+          $ref: "#/components/responses/AuthEmailChangeRequestSuccess"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        409:
+          $ref: "#/components/responses/ConflictAuthEmailChangeDuplicate"
+
+  /auth/profile/email/verify/change:
+    parameters:
+    - in: query
+      name: token
+      schema:
+        example: "eyJhbGc.eyJle.9zZalsd23lsfj"
+      required: true
+      description: JWT
+    
+    put:
+      tags:
+      - profile
+      operationId: authEmailVerifyChange
+      summary: Confirm account email after email change
+      description: Confirms account email after email change request.  This operation will fail if user account is blocked.
+      responses:
+        200:
+          $ref: "#/components/responses/AuthLoginRefreshSuccess"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+  
+  /marketplace/{appName}/gateway/diag/health:
+    parameters:
+    - in: path
+      name: appName
+      schema:
+        example: toxifree
+      required: true
+      description: JWT
+    
+    get:
+      tags:
+      - gateway
+      operationId: gatewayMarketplaceAppGetHealth
+      summary: get health of marketplace app
+      description: get health of marketplace app via gateway (reverse proxy) through this service.  This operation will fail if user account is unverified or blocked.
+      security:
+      - bearerTokenAuth: [ ]
+      responses:
+        200:
+          $ref: "#/components/responses/AppHealthCheck"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountUnverifiedBlocked"
+        404:
+          $ref: "#/components/responses/NotFound"
+        503:
+          $ref: "#/components/responses/AppUnavailable"
+          
+  /admin/accounts/{accountId}/pass/reset:
+    parameters:
+    - in: path
+      name: accountId
+      schema:
+        format: uuid
+      required: true
+      description: user account ID
+  
+    post:
+      tags:
+        - admin
+      operationId: adminAccountsPasswordResetCreate
+      summary: Admin - Create User Account Password Reset
+      description: "Admin - Create User Account Password Reset.  This operation will change user password to a temporary password and email this password to user, flagging account to change password upon logging in.  This operation will close the user's current auth session if open."
+      security:
+        - bearerTokenAuth: [ ]
+      requestBody:
+        description: The pass and conf fields should match.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  format: email
+                  example: foo@prepairelabs.com
+              required:
+                - email
+      responses:
+        200:
+          $ref: "#/components/responses/AuthPasswordResetReceived"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        403:
+          $ref: "#/components/responses/AccountBlocked"
+
+  /admin/newuser/invite:
+    post:
+      tags:
+        - admin
+      operationId: adminNewUserInviteCreate
+      summary: Admin - Create New User Invite
+      description: Admin - Create New User Invite.  This operation creates the new user with a confirmed email and then immediately performs a password reset for the user, emailing them a temp password, etc.
+      security:
+        - bearerTokenAuth: [ ]
+      requestBody:
+        description: The pass and conf fields should match.
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  example: "Invitee Name"
+                email:
+                  example: "user@prepairelabs.com"
+              required:
+              - name
+              - email
+      responses:
+        201:
+          $ref: "#/components/responses/SignupSuccess"
+        400:
+          $ref: "#/components/responses/BadRequest"
+        409:
+          $ref: "#/components/responses/ConflictSignupEmailDuplicate"
+
+components:
+  schemas:
+    AuthRole:
+      type: string
+      enum:
+        - MEMBER
+        - ADMIN
+    
+    AuthToken:
+      type: object
+      properties:
+        token:
+          type: string
+          example: "eyJhbGc.eyJle.9zZalsd23lsfj"
+        expiresAt:
+          type: string
+          format: date-time
+          
+    AuthProfile:
+      type: object
+      properties:
+        email:
+          format: email
+          example: foo@prepairelabs.com
+        name:
+          example: John Smith
+        company:
+          example: Prepaire Labs, Inc.
+        phone:
+          example: "987-654-3210"
+        dob:
+          format: date
+        nationality:
+          example: USA
+        passport:
+          type: string
+          example: "123456789"
+        pic:
+          type: object
+          properties:
+            uploadUrl:
+              example: "https://..."
+            downloadUrl:
+              description: "Null unless file is present in S3 bucket"
+              example: "https://..."
+
+  responses:
+    AppHealthCheck:
+      description: health check from app
+      content:
+        application/json:
+          schema:
+            properties:
+              service:
+                example: toxifree
+              status:
+                example: OK
+              version:
+                example: 0.0.1
+  
+    SignupSuccess:
+      description: signup requested successfully
+      content:
+        application/json:
+          schema:
+            properties:
+              msg:
+                example: "signup requested successfully, please confirm email"
+
+    AuthEmailChangeRequestSuccess:
+      description: email change requested successfully
+      content:
+        application/json:
+          schema:
+            properties:
+              msg:
+                example: "email change requested successfully, please confirm email"
+                
+    AuthLoginRefreshSuccess:
+      description: successful auth login/refresh
+      content:
+        application/json:
+          schema:
+            properties:
+              account:
+                type: object
+                properties:
+                  id:
+                    format: uuid
+                  email:
+                    format: email
+                    example: admin@prepaire.com
+                  role:
+                    $ref: "#/components/schemas/AuthRole"
+                  isVerified:
+                    type: boolean
+                    example: true
+                  isBlocked:
+                    type: boolean
+                    example: false
+                  isPassChange:
+                    type: boolean
+                    example: false
+              session:
+                type: object
+                properties:
+                  id:
+                    format: uuid
+                  expiresAt:
+                    format: date-time
+              authTokens:
+                type: object
+                properties:
+                  refresh:
+                    $ref: "#/components/schemas/AuthToken"
+                  auth:
+                    $ref: "#/components/schemas/AuthToken"
+                
+    AuthPasswordUpdateSuccess:
+      description: password updated successfully
+      content:
+        application/json:
+          schema:
+            properties:
+              msg:
+                type: string
+                example: password updated successfully
+                
+    AuthPasswordResetReceived:
+      description: password reset request received
+      content:
+        application/json:
+          schema:
+            properties:
+              msg:
+                type: string
+                example: password reset request received
+                
+    AuthPasswordForgotReceived:
+      description: forgot password request received
+      content:
+        application/json:
+          schema:
+            properties:
+              msg:
+                type: string
+                example: forgot password request received
+                
+    AuthProfile:
+      description: profile updated successfully
+      content:
+        application/json:
+          schema:
+            properties:
+              profile:
+                $ref: "#/components/schemas/AuthProfile"
+
+    BadRequest:
+      description: bad request
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: bad request
+              code:
+                type: integer
+                example: 1
+
+    Unauthorized:
+      description: unauthorized
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: unauthorized
+              errCode:
+                type: integer
+                example: 1
+                
+    AccountBlocked:
+      description: user account blocked
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: user account blocked
+              errCode:
+                type: integer
+                example: 3
+                
+    AccountUnverifiedBlocked:
+      description: user account unverified or blocked
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: user account unverified/blocked
+              errCode:
+                description: error code 2 if unverified, 3 if blocked
+                type: integer
+                example: 2
+
+    NotFound:
+      description: not found
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: not found
+              errCode:
+                type: integer
+                example: 1
+                
+    ConflictSignupEmailDuplicate:
+      description: email already in use
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: email already in use
+              errCode:
+                type: integer
+                example: 1
+                
+    ConflictAuthEmailChangeDuplicate:
+      description: email already in use
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: email already in use
+              errCode:
+                type: integer
+                example: 1
+                
+    ConflictAlreadyVerified:
+      description: email already verified
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: email already verified
+              errCode:
+                type: integer
+                example: 1
+                
+    AppUnavailable:
+      description: app unavailable
+      content:
+        application/json:
+          schema:
+            properties:
+              err:
+                type: string
+                example: app unavailable
+              errCode:
+                type: integer
+                example: 1
+
+  securitySchemes:
+    basicEmailPassword:
+      type: http
+      scheme: basic
+    bearerTokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    bearerTokenRefresh:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
