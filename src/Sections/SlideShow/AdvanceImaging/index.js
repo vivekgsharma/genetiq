@@ -7,7 +7,7 @@ import overlay from "../../../Assets/overlayModes.png";
 import overlayb from "../../../Assets/overlayModes2.png";
 import overlayc from "../../../Assets/overlayModes3.png";
 import overlayd from "../../../Assets/overlayModes4.png";
-import imgVideo from "../../../Assets/Explorer.mp4";
+import imgVideo from "../../../Assets/Explorer2.mp4";
 import "./styles.scss";
 
 function AdvanceImaging() {
@@ -96,6 +96,7 @@ function AdvanceImaging() {
         //  style={{ y }}
       >
         <div className="advanceImaging-innerContainer">
+          <div className="vignette" />
           <motion.video
             playsInline
             autoPlay

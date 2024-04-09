@@ -23,11 +23,21 @@
   }
 }
 .advanceImaging-container .advanceImaging-innerContainer video {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   position: absolute;
   left: 0%;
   z-index: -2;
+}
+@media (min-width: 1625px) {
+  .advanceImaging-container .advanceImaging-innerContainer video {
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .advanceImaging-container .advanceImaging-innerContainer video {
+    left: -100%;
+  }
 }
 .advanceImaging-container .advanceImaging-innerContainer img {
   width: 80%;
@@ -50,7 +60,7 @@
 @media (max-width: 768px) {
   .advanceImaging-container .advanceImaging-innerContainerb {
     padding-left: 16px;
-    top: 60vh;
+    top: 50vh;
   }
 }
 .advanceImaging-container .advanceImaging-innerContainerb .advanceImaging-img-wrapper {
@@ -71,7 +81,7 @@
 
 .advanceImaging-text-container {
   display: flex;
-  width: 525px;
+  height: 525px;
   text-align: left;
   flex-direction: column;
 }

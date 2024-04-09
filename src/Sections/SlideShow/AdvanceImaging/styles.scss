@@ -26,12 +26,19 @@
       padding-left: 16px;
     }
     video {
-      height: 100vh;
+      height: 90vh;
 
       display: flex;
       position: absolute;
       left: -0%;
       z-index: -2;
+
+      @media (min-width: "1625px") {
+        height: 100vh;
+      }
+      @media (max-width: "768px") {
+        left: -100%;
+      }
     }
 
     img {
@@ -55,7 +62,7 @@
     }
     @media (max-width: 768px) {
       padding-left: 16px;
-      top: 60vh;
+      top: 50vh;
     }
 
     .advanceImaging-img-wrapper {
@@ -79,7 +86,7 @@
 
 .advanceImaging-text-container {
   display: flex;
-  width: 525px;
+  height: 525px;
   text-align: left;
   flex-direction: column;
 

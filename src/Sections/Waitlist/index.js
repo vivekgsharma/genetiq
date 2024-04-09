@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import waitlistbackground from "../../Assets/waitlist-background.png";
 import Whatsapp from "../../Assets/whatsapp.svg";
@@ -7,6 +7,23 @@ import "./styles.scss";
 
 export default function WaitList() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    try {
+      // trying to use new API - https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    } catch (error) {
+      // just a fallback for older browsers
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+  // renders nothing, since nothing is needed
+
   // email and password states that are send to endpoint
   const [Cemail, setEmail] = useState("");
   const [Cphone, setPhone] = useState("");

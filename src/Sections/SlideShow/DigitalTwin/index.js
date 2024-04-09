@@ -3,7 +3,7 @@ import { useTransform, useScroll, motion } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import explorer from "../../../Assets/DigitalTwin.png";
 import twinVideo from "../../../Assets/genetiQ-Video1080.mp4";
-import imgVideo from "../../../Assets/clinic-video.mp4";
+import imgVideo from "../../../Assets/clinic-video2.mp4";
 import "./styles.scss";
 
 function DigitalTwin() {

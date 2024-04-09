@@ -31,19 +31,28 @@
     }
     .twin-videoWrapper {
       video {
-        video {
-          height: 100vh;
-        }
-      }
+        width: 100vw;
 
-      @media (max-width: 1440px) {
-        width: auto;
-        height: 150%;
+        @media (max-width: 1315px) {
+          height: 100vh;
+          width: 150vw;
+          left: 150px;
+        }
+        @media (max-width: 500px) {
+          height: 100vh;
+          width: auto;
+        }
       }
 
       position: absolute;
       left: 0%;
       z-index: -1;
+
+      @media (max-width: 1315px) {
+      }
+      @media (max-width: 500px) {
+        left: -150%;
+      }
     }
   }
 

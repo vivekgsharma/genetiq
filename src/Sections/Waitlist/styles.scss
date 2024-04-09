@@ -6,6 +6,14 @@
   margin-bottom: 110px;
   padding: 0px 24px 0px 24px;
   text-align: left;
+  width: auto;
+  @media (max-width: 1024px) {
+    padding: 24px 16px 48px 16px;
+    margin-top: 59px;
+    margin-bottom: 32px;
+    gap: 83px;
+    width: auto;
+  }
   h2 {
     /* Heading 1 & 2 (landing) */
     color: #0e2e51;
@@ -16,6 +24,10 @@
     line-height: 52px; /* 108.333% */
     letter-spacing: -2.4px;
     margin: 0px;
+
+    @media (max-width: "1200px") {
+      font-size: 36px;
+    }
   }
   strong {
     color: var(--Blue, #0e2e51);
@@ -51,9 +63,14 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
+    width: auto;
     img {
       width: 696px;
       height: 165px;
+      @media (max-width: "1200px") {
+        width: 100%;
+        height: auto;
+      }
     }
     .description {
       color: var(--black-80, rgba(28, 28, 28, 0.8));
