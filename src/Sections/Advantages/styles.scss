@@ -166,24 +166,47 @@
       font-weight: 700;
       line-height: 28px; /* 140% */
       letter-spacing: 0.2px;
-      transition: ease-in-out 0.4s;
+      // transition: ease-in-out 0.4s;
       cursor: pointer;
-    }
-
-    &:hover {
-      .heading-item2 {
-        color: var(--Blue, #0e2e51);
+      transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+      // transition: color 0.3s, font-size 0.3s;
+      &.highlight {
+        color: var(--Blue, #0e2e51); // Darker color
+        font-size: 1.2em; // Slightly increased font size
         opacity: 1;
+      }
 
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px; /* 116.667% */
-        letter-spacing: 0.24px;
+      @media (min-width: 768px) {
+        // Only apply hover effects when the window width is 768px or more
+        &:hover {
+          color: var(--Blue, #0e2e51);
+          opacity: 1;
 
-        align-self: stretch;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 28px; /* 116.667% */
+          letter-spacing: 0.24px;
+
+          align-self: stretch;
+        }
       }
     }
+
+    // &:hover {
+    //   .heading-item2 {
+    //     color: var(--Blue, #0e2e51);
+    //     opacity: 1;
+
+    //     font-size: 24px;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     line-height: 28px; /* 116.667% */
+    //     letter-spacing: 0.24px;
+
+    //     align-self: stretch;
+    //   }
+    // }
     .heading-item {
       color: var(--Blue, #0e2e51);
 
