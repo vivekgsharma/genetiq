@@ -147,6 +147,15 @@
   font-weight: 400;
   line-height: 20px; /* 142.857% */
 }
+.waitlist-outter-container .waitlist-container .submit-container .input-group-container .input-container input::-moz-placeholder {
+  color: #737373;
+  /* Paragraph/Small/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
 .waitlist-outter-container .waitlist-container .submit-container .input-group-container .input-container input::placeholder {
   color: #737373;
   /* Paragraph/Small/Regular */

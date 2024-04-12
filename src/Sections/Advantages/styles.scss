@@ -171,9 +171,16 @@
       transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
       // transition: color 0.3s, font-size 0.3s;
       &.highlight {
-        color: var(--Blue, #0e2e51); // Darker color
-        font-size: 1.2em; // Slightly increased font size
+        color: var(--Blue, #0e2e51);
         opacity: 1;
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: 0.24px;
+
+        align-self: stretch;
       }
 
       @media (min-width: 768px) {
