@@ -52,18 +52,28 @@ function Advantages() {
     };
   }, []);
 
-    // Individual refs for each heading to apply effects based on visibility
-    const [ref1, inView1] = useInView({ threshold: 0.9 });
-    const [ref2, inView2] = useInView({ threshold: 0.9 });
-    const [ref3, inView3] = useInView({ threshold: 0.9 });
-    const [ref4, inView4] = useInView({ threshold: 0.9 });
-  
+  // Individual refs for each heading to apply effects based on visibility
+  // const [ref1, inView1] = useInView({ threshold: 0.9 });
+  // const [ref2, inView2] = useInView({ threshold: 0.9 });
+  // const [ref3, inView3] = useInView({ threshold: 0.9 });
+  // const [ref4, inView4] = useInView({ threshold: 0.9 });
+  const [ref1, inView1] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref4, inView4] = useInView({
+    threshold: 0.5,
+    rootMargin: "-40% 0px -40% 0px",
+  });
 
-  // Determine if effects should be applied based on scroll position and screen width
- 
-  const applyEffects = windowWidth < 1050;
-
-  console.log(windowWidth, scrollY, applyEffects, "console");
   return (
     <div className="Biotune-Gentic-Advantage">
       {/* <div>
@@ -110,9 +120,7 @@ function Advantages() {
           <div ref={ref1} className="right-gentic-item-content">
             <div className="gentic-item-inner">
               {/* <div className="heading-item2"> */}
-              <div
-                className={`heading-item2 ${inView1 ? "highlight" : ""}`}
-              >
+              <div className={`heading-item2 ${inView1 ? "highlight" : ""}`}>
                 Quality Testing Made Affordable
               </div>
               <div className="para-item">
@@ -142,9 +150,7 @@ function Advantages() {
           <div ref={ref2} className="right-gentic-item-content">
             <div className="gentic-item-inner">
               {/* <div className="heading-item2"> */}
-              <div
-                className={`heading-item2 ${inView2 ? "highlight" : ""}`}
-              >
+              <div className={`heading-item2 ${inView2 ? "highlight" : ""}`}>
                 Discover Your Health Journey
               </div>
               <div className="para-item">
@@ -174,9 +180,7 @@ function Advantages() {
           <div ref={ref3} className="right-gentic-item-content">
             <div className="gentic-item-inner">
               {/* <div className="heading-item2"> */}
-              <div
-                className={`heading-item2 ${inView3 ? "highlight" : ""}`}
-              >
+              <div className={`heading-item2 ${inView3 ? "highlight" : ""}`}>
                 Longevity & Personalized Supplements{" "}
               </div>
               <div className="para-item">
@@ -206,9 +210,7 @@ function Advantages() {
           <div ref={ref4} className="right-gentic-item-content">
             <div className="gentic-item-inner">
               {/* <div className="heading-item2"> */}
-              <div
-                className={`heading-item2 ${inView4 ? "highlight" : ""}`}
-              >
+              <div className={`heading-item2 ${inView4 ? "highlight" : ""}`}>
                 Data Storage and Security
               </div>
               <div className="para-item">

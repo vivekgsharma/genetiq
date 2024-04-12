@@ -80,6 +80,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .footer-right-container .footer-right-item .addresss-text {
@@ -105,6 +106,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  width: -moz-fit-content;
   width: fit-content;
   max-width: 300px;
   align-self: stretch;

@@ -30,7 +30,8 @@
 }
 .image-full-wrapper img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 2800px) {
   .image-full-wrapper img {
