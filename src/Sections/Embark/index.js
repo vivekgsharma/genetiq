@@ -15,10 +15,7 @@ function Embark() {
           </div>
         </div>
         <div className="join-left-button">
-          <Link
-            className="left-btn-box"
-            to="https://app.prepaire.com:5067/#/wishlist"
-          >
+          <Link className="left-btn-box" to="/waitlist">
             Join waitlist
           </Link>
         </div>

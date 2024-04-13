@@ -5,18 +5,22 @@ import "./styles.scss";
 function Lab() {
   return (
     <div className="Lab-container">
-      <div className="lab-img-wrapper">
+      {/* <div className="lab-img-wrapper">
         <img src={Labs} />
+      </div> */}
+      <div className="text-clinic-container">
+        <h1>
+          UAE Clinic Premiere <span> Q4</span> 2024.
+        </h1>
+        <h2>
+          Equipped with cutting-edge technologies such as pluripotent stem cells
+          and gene therapy treatments, our facilities are designed to address
+          longevity, wellness, beauty, health span, and biological age
+          enhancement. Access the latest treatment plans and exclusive offers
+          via the GenetiQ app, supported by our concierge service to assist you
+          with bookings and streamline the process.
+        </h2>
       </div>
-      <h1>
-        First clinic in UAE in<span> Q3</span> next year.
-      </h1>
-      <h2>
-        It will be fitted with state-of-the-art technologies & equipment,
-        including pluripotent stem cells and gene therapy equipment, our
-        facilities will cater to wellness, beauty, and, crucially, anti-aging
-        and health span enhancement.
-      </h2>
     </div>
   );
 }

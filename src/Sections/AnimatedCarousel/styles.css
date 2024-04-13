@@ -2,23 +2,45 @@
   display: flex;
   width: auto;
   padding: 50px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 0px;
   gap: 32px;
-  width: auto;
-  overflow: hidden !important;
+  margin-top: 0px;
+  height: -moz-fit-content;
+  height: fit-content;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
+@media (min-width: 1919px) {
+  .enter-genetiq-container {
+    padding: 50px;
+    padding-top: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
 @media (max-width: 768px) {
   .enter-genetiq-container {
     padding: 16px;
+    padding-top: 50px;
   }
+}
+
+.enter-genetiq-innerContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
 }
 
 .gentiq-Text {
   color: var(--Blue, #0e2e51);
-  text-align: center;
+  text-align: left;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -28,16 +50,58 @@
 
 .gentix-continer-track {
   display: flex;
+  position: relative;
   flex-direction: row;
   gap: 10px;
+  width: -moz-fit-content;
   width: fit-content;
 }
-.gentix-continer-track:hover .gentix-continer-items {
-  cursor: pointer;
-  animation-play-state: paused;
+
+.gentix-continer-trackMobile {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 500px) {
+  .gentix-continer-trackMobile {
+    display: flex;
+  }
+}
+
+.gentix-continer-trackB {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 500px) {
+  .gentix-continer-trackB {
+    display: none;
+  }
+}
+
+.gentix-continer-trackBMobile {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 500px) {
+  .gentix-continer-trackBMobile {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .gentix-continer-items {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: row;
@@ -54,80 +118,93 @@
     height: 315px;
   }
 }
-.gentix-continer-items .gentix-conatiner-item-box {
-  width: 315px;
-  flex-shrink: 0;
+
+.genetiq-item-container {
+  display: flex;
+  padding: 24px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  justify-content: space-between;
+  align-self: stretch;
+  text-align: left;
+  width: 274px;
+  height: 316px;
+  overflow: hidden !important;
   border-radius: 20px;
   border: 1px solid rgba(14, 46, 81, 0.1);
+  align-items: flex-start;
 }
-.gentix-continer-items .gentix-conatiner-item-box .gentix-box-text {
+.genetiq-item-container div {
+  display: flex;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 500px) {
+  .genetiq-item-container {
+    width: auto;
+  }
+}
+.genetiq-item-container img {
+  width: 323px;
+  margin-left: -24px;
+}
+@media (max-width: 500px) {
+  .genetiq-item-container img {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+}
+.genetiq-item-container h1 {
   color: var(--Blue, #0e2e51);
-  font-size: 17px;
+  /* Heading 5 */
+  font-family: Inter;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 141.176% */
-  letter-spacing: 0.34px;
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-right: 38px;
-}
-.gentix-continer-items .gentix-conatiner-item-box .gentix-box-text span {
-  color: var(--Gray, #6d6d6d);
-}
-
-.card-genitq-container {
-  min-width: 300px;
-  width: 30%;
-  height: 315px;
-  border-radius: 20px;
-  border: 1px solid rgba(14, 46, 81, 0.1);
-  overflow: hidden;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  margin: 0px;
   text-align: left;
 }
-.card-genitq-container div {
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.card-genitq-container span {
-  color: var(--Blue, #0e2e51);
-  font-size: 17px;
+.genetiq-item-container p {
+  color: var(--Medium-Grey-Paragraphs, #6d6d6d);
+  font-family: Inter;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 24px; /* 141.176% */
-  letter-spacing: 0.34px;
-}
-.card-genitq-container p {
-  color: var(--Gray, #6d6d6d);
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 0.34px;
-  margin-top: 0px;
-}
-.card-genitq-container img {
-  width: 100%;
-  height: auto;
+  font-weight: 400;
+  line-height: 130%; /* 20.8p
+  }
 }
 
-.card-genitq-imgWrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0px !important;
-  margin: 0px;
-}
-
-.gentix-conatiner-item-box {
-  flex-shrink: 0;
-}
-
-@keyframes slideRightToLeft {
-  from {
+@keyframes scroll {
+  0% {
     transform: translateX(0%);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Assuming duplicated items, this moves the track by half its full width */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%); /* Assuming duplicated items, this moves the track by half its full width */
+  }
+}
+@keyframes scrollB {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%); /* Assuming duplicated items, this moves the track by half its full width */
   }
 }/*# sourceMappingURL=styles.css.map */

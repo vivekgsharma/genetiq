@@ -1,0 +1,213 @@
+.digitalTwin-container {
+  position: relative;
+  align-items: center;
+  height: 900vh;
+  background: #000000;
+  flex-direction: column;
+  width: 100%;
+
+  // div {
+  //   position: relative;
+  //   height: 500px;
+  // }
+  .digitalTwin-innerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+
+    overflow: visible;
+    height: 100vh;
+    padding-left: 60px;
+    overflow: hidden;
+    @media (max-width: 1440px) {
+      padding-left: 60px;
+      overflow: hidden;
+    }
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+    .twin-videoWrapper {
+      video {
+        width: 100vw;
+
+        @media (max-width: 1315px) {
+          height: 100vh;
+          width: 150vw;
+          left: 150px;
+        }
+        @media (max-width: 500px) {
+          height: 100vh;
+          width: auto;
+        }
+      }
+
+      position: absolute;
+      left: 0%;
+      z-index: -1;
+
+      @media (max-width: 1315px) {
+      }
+      @media (max-width: 500px) {
+        left: -150%;
+      }
+    }
+  }
+
+  .twin-innerContainerb {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    position: sticky;
+    top: 70vh;
+    justify-content: space-between;
+    width: auto;
+
+    padding-left: 60px;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+    .advanceImaging-text-container {
+      display: flex;
+      width: 525px;
+      text-align: left;
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      h1 {
+        color: var(--White, #fff);
+
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: -1.44px;
+      }
+      h2 {
+        color: var(--White, #fff);
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 116.667% */
+        letter-spacing: 0.24px;
+      }
+      p {
+        color: var(--White, #fff);
+
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px; /* 141.176% */
+        letter-spacing: 0.34px;
+      }
+      span {
+        background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    @media (max-width: 768px) {
+      padding-left: 16px;
+    }
+    video {
+      width: auto;
+      height: 60vh;
+      border-radius: 20px;
+      margin: 60px;
+      margin-right: 60px;
+
+      // @media (min-width: 768px) {
+      //   width: 90vw;
+      //   margin: 16px;
+      //   height: auto;
+      // }
+      @media (max-width: 1049px) {
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+        height: auto;
+        width: 92%;
+      }
+      @media (max-width: 780px) {
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+        height: auto;
+        width: 92%;
+      }
+    }
+  }
+
+  .twin-img-wrapper {
+    position: relative;
+    display: flex;
+    width: auto;
+    margin: 0px;
+    justify-content: center;
+
+    .twin-overlayMode {
+      position: absolute;
+    }
+    img {
+      height: 90vh;
+      @media (max-width: 768px) {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.advanceImaging-text-container {
+  display: flex;
+  width: 525px;
+  text-align: left;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  h1 {
+    color: var(--White, #fff);
+
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -1.44px;
+  }
+  h2 {
+    color: var(--White, #fff);
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: 0.24px;
+  }
+  p {
+    color: var(--White, #fff);
+
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px; /* 141.176% */
+    letter-spacing: 0.34px;
+  }
+  span {
+    background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

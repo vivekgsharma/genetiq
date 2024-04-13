@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useInView } from "react-intersection-observer";
 
@@ -13,8 +13,10 @@ import bgMask from "../../Assets/radialbgMask.png";
 import "./styles.scss";
 
 function Advantages() {
-  const [currentImage, setCurrentImage] = useState(Gentimacine);
+  const [currentImage, setCurrentImage] = useState(Gentimacineb);
   const [angle, setAngle] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { ref, inView } = useInView({
     triggerOnce: true, // The animation will only run once
     threshold: 0.5, // The component will trigger the animation when 50% of it is in view
@@ -27,9 +29,54 @@ function Advantages() {
     setAngle((prevAngle) => prevAngle + 70); // Rotate 90 degrees on each click
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Detect scroll to adjust scrollY state
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Individual refs for each heading to apply effects based on visibility
+  // const [ref1, inView1] = useInView({ threshold: 0.9 });
+  // const [ref2, inView2] = useInView({ threshold: 0.9 });
+  // const [ref3, inView3] = useInView({ threshold: 0.9 });
+  // const [ref4, inView4] = useInView({ threshold: 0.9 });
+  const [ref1, inView1] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref4, inView4] = useInView({
+    threshold: 0.5,
+    rootMargin: "-40% 0px -40% 0px",
+  });
+
   return (
     <div className="Biotune-Gentic-Advantage">
-      <div>
+      {/* <div>
         <img
           className="genetiq-animated-bg-mask"
           src={bgMask}
@@ -47,91 +94,218 @@ function Advantages() {
           src={bg}
           alt="background"
         />
-      </div>
+      </div> */}
       <div className="gentic-advan-heading">GenetiQ Advantages</div>
-      <div className="gentic-conatiner">
-        <motion.div
-          className="left-gentic-item-box"
-          ref={ref}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, velocity: 2 }}
-        >
-          <img src={currentImage} alt={currentImage} />
-        </motion.div>
+
+      {windowWidth < 768 ? (
         <div className="right-gentic-item-box">
-          <div className="right-gentic-item-content">
-            <div
-              className="gentic-item-inner"
-              onMouseEnter={() => {
-                setImage(Gentimacine);
-                rotateImage();
-              }}
-            >
-              <div className="heading-item2">GenetiQ Sequencing Test</div>
+          <motion.div
+            className="left-gentic-item-box"
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, velocity: 2 }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Gentimacineb}
+              alt={currentImage}
+              style={{ width: "80%", height: "auto" }}
+            />
+          </motion.div>
+          <div ref={ref1} className="right-gentic-item-content">
+            <div className="gentic-item-inner">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView1 ? "highlight" : ""}`}>
+                Quality Testing Made Affordable
+              </div>
               <div className="para-item">
-                Order and manage GenetiQ sequencing tests seamlessly from
-                Health+plus Ancestry or GenetiQ+plus Premium services.
+                Most advanced genomic sequencing and blood tests at unbeatable
+                prices thanks to partnerships with leading diagnostic firms.
               </div>
             </div>
           </div>
-          <div className="right-gentic-item-content">
-            <div
-              className="gentic-item-inner"
-              onMouseEnter={() => {
-                setImage(Gentimacineb);
-                rotateImage();
-              }}
-            >
-              <div className="heading-item2">
-                User-Friendly DNA Sample Collection
+          <motion.div
+            className="left-gentic-item-box"
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, velocity: 2 }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Gentimacinec}
+              alt={currentImage}
+              style={{ width: "80%", height: "auto" }}
+            />
+          </motion.div>
+          <div ref={ref2} className="right-gentic-item-content">
+            <div className="gentic-item-inner">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView2 ? "highlight" : ""}`}>
+                Discover Your Health Journey
               </div>
               <div className="para-item">
-                Easy-to-follow at home saliva collection with express shipping
-                options. CLIA-certified and CAP-accredited labs for sample
-                processing.
+                Accessed through web, app, and VR, users get detailed analysis
+                and tailored recommendations for better health.
               </div>
             </div>
           </div>
-          <div className="right-gentic-item-content">
-            <div
-              className="gentic-item-inner"
-              onMouseEnter={() => {
-                setImage(Gentimacinec);
-                rotateImage();
-              }}
-            >
-              <div className="heading-item2">
-                Scientific Validity and Rigorous Analysis
+          <motion.div
+            className="left-gentic-item-box"
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, velocity: 2 }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Gentimacined}
+              alt={currentImage}
+              style={{ width: "80%", height: "auto" }}
+            />
+          </motion.div>
+          <div ref={ref3} className="right-gentic-item-content">
+            <div className="gentic-item-inner">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView3 ? "highlight" : ""}`}>
+                Longevity & Personalized Supplements{" "}
               </div>
               <div className="para-item">
-                FDA-cleared DNA collection kit for reliable reports and
-                genotyping on a well-established platform ensures accuracy.
-                Reports developed by experts through a rigorous scientific
-                process.
+                Personalized healthcare for longevity and precision medicine,
+                merging advanced diagnostics with innovative treatments.
               </div>
             </div>
           </div>
-          <div className="right-gentic-item-content">
-            <div
-              className="gentic-item-inner"
-              onMouseEnter={() => {
-                setImage(Gentimacined);
-                rotateImage();
-              }}
-            >
-              <div className="heading-item2">
-                Comprehensive Application Features
+          <motion.div
+            className="left-gentic-item-box"
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, velocity: 2 }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Gentimacine}
+              alt={currentImage}
+              style={{ width: "80%", height: "auto" }}
+            />
+          </motion.div>
+          <div ref={ref4} className="right-gentic-item-content">
+            <div className="gentic-item-inner">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView4 ? "highlight" : ""}`}>
+                Data Storage and Security
               </div>
               <div className="para-item">
-                Genetic testing, health reports, pharmacogenomics, fitness
-                insights and more. Real-time updates on genetic discoveries and
-                secure data storage.
+                Our advanced encryption protocols safeguard your information
+                during collection, transmission, and storage, meeting
+                industry-leading standards to ensure your privacy and peace of
+                mind as you prioritize your health and well-being.
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="gentic-conatiner">
+          <motion.div
+            className="left-gentic-item-box"
+            ref={ref}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, velocity: 2 }}
+          >
+            <img src={currentImage} alt={currentImage} />
+          </motion.div>
+          <div className="right-gentic-item-box">
+            <div className="right-gentic-item-content">
+              <div
+                className="gentic-item-inner"
+                onMouseEnter={() => {
+                  setImage(Gentimacineb);
+                  rotateImage();
+                }}
+              >
+                <div className="heading-item2">
+                  Quality Testing Made Affordable
+                </div>
+                <div className="para-item">
+                  Most advanced genomic sequencing and blood tests at unbeatable
+                  prices thanks to partnerships with leading diagnostic firms.
+                </div>
+              </div>
+            </div>
+
+            <div className="right-gentic-item-content">
+              <div
+                className="gentic-item-inner"
+                onMouseEnter={() => {
+                  setImage(Gentimacinec);
+                  rotateImage();
+                }}
+              >
+                <div className="heading-item2">
+                  Discover Your Health Journey
+                </div>
+                <div className="para-item">
+                  Accessed through web, app, and VR, users get detailed analysis
+                  and tailored recommendations for better health.
+                </div>
+              </div>
+            </div>
+            <div className="right-gentic-item-content">
+              <div
+                className="gentic-item-inner"
+                onMouseEnter={() => {
+                  setImage(Gentimacined);
+                  rotateImage();
+                }}
+              >
+                <div className="heading-item2">
+                  Longevity & Personalized Supplements{" "}
+                </div>
+                <div className="para-item">
+                  Personalized healthcare for longevity and precision medicine,
+                  merging advanced diagnostics with innovative treatments.
+                </div>
+              </div>
+            </div>
+            <div className="right-gentic-item-content">
+              <div
+                className="gentic-item-inner"
+                onMouseEnter={() => {
+                  setImage(Gentimacine);
+                  rotateImage();
+                }}
+              >
+                <div className="heading-item2">Data Storage and Security</div>
+                <div className="para-item">
+                  Our advanced encryption protocols safeguard your information
+                  during collection, transmission, and storage, meeting
+                  industry-leading standards to ensure your privacy and peace of
+                  mind as you prioritize your health and well-being.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

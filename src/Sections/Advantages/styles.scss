@@ -2,9 +2,20 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 90px 50px 60px 50px;
+  padding: 50px 50px 50px 50px;
   text-align: left;
   flex-direction: column;
+
+  @media (min-width: 1919px) {
+    padding: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 16px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .gentic-conatiner {
@@ -14,7 +25,7 @@
   width: 100%;
   justify-content: space-between;
   flex-direction: row;
-  padding-top: 48px;
+  padding-top: 24px;
   @media (max-width: 1260px) {
     justify-content: flex-start;
   }
@@ -60,16 +71,25 @@
     top: 17%;
     transform: rotateY(180deg);
   }
-  @media (max-width: 700px) {
-    right: 0px;
-    width: 90%;
+  @media (max-width: 768px) {
+    display: none;
+    right: 20vw;
+    width: 30%;
     top: 10%;
     transform: rotateY(180deg);
   }
   @media (max-width: 540px) {
-    right: 0px;
-    width: 90%;
-    top: 15%;
+    display: none;
+    right: 0vw;
+    width: 80%;
+    top: 10%;
+    transform: rotateY(180deg);
+  }
+  @media (max-width: 478px) {
+    display: none;
+    right: 0vw;
+    width: 80%;
+    top: 12%;
     transform: rotateY(180deg);
   }
 }
@@ -91,16 +111,10 @@
     top: 17%;
     transform: rotateY(180deg);
   }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     right: 0px;
     width: 100%;
     top: 8%;
-    transform: rotateY(180deg);
-  }
-  @media (max-width: 540px) {
-    right: 0px;
-    width: 90%;
-    top: 15%;
     transform: rotateY(180deg);
   }
 }
@@ -110,21 +124,20 @@
   gap: 100px;
   justify-content: center;
 
-  width: 50%;
-  max-width: 500px;
-  @media (max-width: 1206px) {
-    width: 100%;
-    max-width: 500px;
-  }
   img {
-    width: 100%;
+    width: 570px;
+    height: 552px;
+    @media (max-width: 768px) {
+      width: 285px;
+      height: 276px;
+    }
   }
 }
 .right-gentic-item-box {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  width: 50%;
+
   @media (max-width: 1206px) {
     width: 100%;
   }
@@ -155,22 +168,44 @@
       letter-spacing: 0.2px;
       transition: ease-in-out 0.4s;
       cursor: pointer;
-    }
-
-    &:hover {
-      .heading-item2 {
+      // transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+      // transition: color 0.3s, font-size 0.3s;
+      &.highlight {
         color: var(--Blue, #0e2e51);
         opacity: 1;
+      }
 
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 28px; /* 116.667% */
-        letter-spacing: 0.24px;
+      @media (min-width: 768px) {
+        // Only apply hover effects when the window width is 768px or more
+        &:hover {
+          color: var(--Blue, #0e2e51);
+          opacity: 1;
 
-        align-self: stretch;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 28px; /* 116.667% */
+          letter-spacing: 0.24px;
+
+          align-self: stretch;
+        }
       }
     }
+
+    // &:hover {
+    //   .heading-item2 {
+    //     color: var(--Blue, #0e2e51);
+    //     opacity: 1;
+
+    //     font-size: 24px;
+    //     font-style: normal;
+    //     font-weight: 700;
+    //     line-height: 28px; /* 116.667% */
+    //     letter-spacing: 0.24px;
+
+    //     align-self: stretch;
+    //   }
+    // }
     .heading-item {
       color: var(--Blue, #0e2e51);
 

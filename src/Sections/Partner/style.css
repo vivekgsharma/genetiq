@@ -1,5 +1,5 @@
 .Bitoutne-Partner {
-  padding: 90px 50px 30px 50px;
+  padding: 50px 50px 50px 50px;
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -8,9 +8,19 @@
   gap: 20px;
   background: #fff;
 }
+@media (min-width: 1920px) {
+  .Bitoutne-Partner {
+    padding: 50px 120px 50px 120px;
+  }
+}
+@media (max-width: 786px) {
+  .Bitoutne-Partner {
+    padding: 50px 16px 50px 16px;
+  }
+}
 @media (max-width: 390px) {
   .Bitoutne-Partner {
-    padding: 90px 16px 30px 16px;
+    padding: 50px 16px 50px 16px;
   }
 }
 

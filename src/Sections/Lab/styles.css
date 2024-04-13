@@ -1,15 +1,35 @@
 .Lab-container {
-  position: relative;
-  height: 50vw;
-  width: 100%;
   display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 20px;
-  overflow: hidden;
+  background-image: url(../../Assets/Lab.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
 }
-.Lab-container h1 {
+@media (max-width: 390px) {
+  .Lab-container {
+    background-position: 30%;
+  }
+}
+.Lab-container .text-clinic-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-top: 50px;
+}
+@media (max-width: 786px) {
+  .Lab-container .text-clinic-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.Lab-container .text-clinic-container h1 {
   color: var(--Blue, #0e2e51);
   text-align: center;
   font-size: 60px;
@@ -17,54 +37,61 @@
   font-weight: 700;
   line-height: 100%; /* 60px */
   letter-spacing: -1.2px;
-  max-width: 1040px;
+  max-width: 1200px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-.Lab-container h1 span {
+.Lab-container .text-clinic-container h1 span {
   background: linear-gradient(180deg, #0e2e51 0%, #a8d7fa 121.67%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 1440px) {
-  .Lab-container h1 {
-    font-size: 50px;
+  .Lab-container .text-clinic-container h1 {
+    font-size: 60px;
   }
 }
 @media (max-width: 768px) {
-  .Lab-container h1 {
+  .Lab-container .text-clinic-container h1 {
     font-size: 40px;
   }
 }
-.Lab-container h2 {
+.Lab-container .text-clinic-container h2 {
+  color: #0e2e51;
   color: #0e2e51;
   text-align: center;
+  font-family: Inter;
   font-size: 17px;
   font-style: normal;
-  font-weight: 300;
-  line-height: 24px; /* 141.176% */
-  letter-spacing: 0.34px;
-  max-width: 1040px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 680px;
 }
 @media (max-width: 1440px) {
-  .Lab-container h2 {
+  .Lab-container .text-clinic-container h2 {
     font-size: 15px;
   }
 }
-@media (max-width: 1440px) {
-  .Lab-container {
-    height: 50vw;
+@media (max-width: 768px) {
+  .Lab-container .text-clinic-container h2 {
+    color: #0e2e51;
+    text-align: center;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
   }
 }
 .Lab-container .lab-img-wrapper {
   display: flex;
+  justify-content: center;
   position: absolute;
-  overflow: hidden;
-  height: fit-content;
   z-index: -1;
+  position: relative;
+  width: 100vw;
 }
 .Lab-container .lab-img-wrapper img {
   width: 100%;
-  max-width: 1920px;
-  height: 100%;
-  object-fit: cover;
 }/*# sourceMappingURL=styles.css.map */

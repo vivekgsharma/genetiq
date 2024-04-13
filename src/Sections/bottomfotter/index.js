@@ -33,14 +33,24 @@ function Bottombar() {
           <img src={Linkdinlogo} alt="" />
         </Link>
       </div>
-      <div className="second-item-bottom">
-        <div className="text-terms-second-item">Terms of service</div>
+      <div className="terms-holder">
+        <Link
+          className="second-item-bottom"
+          to="https://app.termly.io/document/terms-of-service/fb3569e8-7a0f-4c89-8a4f-0a9bbbcde184"
+        >
+          <p className="text-terms-second-item">Terms of service</p>
+        </Link>
         <img src={Circlelogo} alt="" />
-        <div className="text-terms-second-item">Privacy policy</div>
+        <Link
+          className="second-item-bottom"
+          to="https://app.termly.io/document/privacy-policy/c26544c0-fecf-417b-9648-3aa50e9054e0"
+        >
+          <p className="text-terms-second-item">Privacy policy</p>
+        </Link>
       </div>
 
       <div className="copyright-text">
-        Copyright © 2024 GenetiQ Inc. All rights reserved.
+        Copyright © 2024 Prepaire Labs Inc. All rights reserved.
       </div>
     </div>
   );

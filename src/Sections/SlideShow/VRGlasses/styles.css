@@ -1,0 +1,114 @@
+.VrGlasess-container {
+  position: relative;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  height: 700vh;
+  background: #000000;
+  flex-direction: row;
+  width: 100%;
+}
+.VrGlasess-container .VrInner-container {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0;
+  height: 100vh;
+  padding-left: 60px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .VrGlasess-container .VrInner-container {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 1156px) {
+  .VrGlasess-container .VrInner-container {
+    padding-left: 16px;
+    width: 100%;
+  }
+}
+.VrGlasess-container .VrInner-container .Vr-text-container {
+  display: flex;
+  text-align: left;
+  max-width: 525px;
+  flex-direction: column;
+  position: sticky;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .VrGlasess-container .VrInner-container .Vr-text-container {
+    width: auto;
+    max-width: 525px;
+  }
+}
+.VrGlasess-container .VrInner-container .Vr-text-container h1 {
+  color: var(--White, #fff);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.44px;
+}
+.VrGlasess-container .VrInner-container .Vr-text-container h2 {
+  color: var(--White, #fff);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 116.667% */
+  letter-spacing: 0.24px;
+}
+.VrGlasess-container .VrInner-container .Vr-text-container p {
+  color: var(--White, #fff);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 141.176% */
+  letter-spacing: 0.34px;
+}
+.VrGlasess-container .VrInner-container .Vr-text-container span {
+  background: linear-gradient(90deg, #a9d8fb 0%, #648095 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 600px) {
+  .VrGlasess-container .VrInner-container .Vr-text-container {
+    width: 90%;
+  }
+}
+.VrGlasess-container .VrInner-container .Vr-image-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+  overflow: hidden;
+}
+@media (max-width: 1160px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container {
+    overflow: visible;
+  }
+}
+@media (max-width: 1156px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container {
+    overflow: visible;
+    margin-left: 0px;
+    justify-content: center;
+    position: absolute;
+    z-index: -2;
+  }
+}
+.VrGlasess-container .VrInner-container .Vr-image-container img {
+  width: 993px;
+}
+@media (max-width: 946px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container img {
+    width: 180%;
+  }
+}
+@media (max-width: 600px) {
+  .VrGlasess-container .VrInner-container .Vr-image-container img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
