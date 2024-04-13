@@ -114,7 +114,7 @@
 }
 @media (max-width: 768px) {
   .opener-tittlea-container img {
-    width: 66px;
+    width: 40px;
     display: none;
   }
 }
@@ -126,7 +126,6 @@
 @media (max-width: 768px) {
   .opener-tittlea-container {
     flex-direction: row-reverse;
-    width: -moz-fit-content;
     width: fit-content;
   }
 }
@@ -135,7 +134,6 @@
   display: flex;
   gap: 23px;
   justify-content: center;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
 }
@@ -151,7 +149,6 @@
 }
 @media (max-width: 768px) {
   .opener-tittleb-container {
-    width: -moz-fit-content;
     width: fit-content;
   }
 }
