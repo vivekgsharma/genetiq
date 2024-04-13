@@ -87,11 +87,17 @@
   .opener-container h1 {
     font-size: 64px;
     text-align: left;
+    color: var(--Blue, #0e2e51);
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -1.44px;
+    font-size: 5vw;
   }
 }
 @media (max-width: 500px) {
   .opener-container h1 {
-    font-size: 36px;
+    font-size: 5.7vw;
   }
 }
 
@@ -120,6 +126,8 @@
 @media (max-width: 768px) {
   .opener-tittlea-container {
     flex-direction: row-reverse;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 
@@ -127,6 +135,7 @@
   display: flex;
   gap: 23px;
   justify-content: center;
+  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
 }
@@ -138,6 +147,12 @@
   .opener-tittleb-container img {
     width: 66px;
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .opener-tittleb-container {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 

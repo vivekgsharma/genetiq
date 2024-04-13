@@ -134,6 +134,7 @@
 }
 .Embark-conatiner-right img {
   border-radius: 20px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -15,6 +15,7 @@ import "./styles.scss";
 function Advantages() {
   const [currentImage, setCurrentImage] = useState(Gentimacineb);
   const [angle, setAngle] = useState(0);
+  const [scrollY, setScrollY] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { ref, inView } = useInView({
     triggerOnce: true, // The animation will only run once
@@ -39,6 +40,39 @@ function Advantages() {
     // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Detect scroll to adjust scrollY state
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Individual refs for each heading to apply effects based on visibility
+  // const [ref1, inView1] = useInView({ threshold: 0.9 });
+  // const [ref2, inView2] = useInView({ threshold: 0.9 });
+  // const [ref3, inView3] = useInView({ threshold: 0.9 });
+  // const [ref4, inView4] = useInView({ threshold: 0.9 });
+  const [ref1, inView1] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref2, inView2] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref3, inView3] = useInView({
+    threshold: 0.5,
+    rootMargin: "-30% 0px -30% 0px",
+  });
+  const [ref4, inView4] = useInView({
+    threshold: 0.5,
+    rootMargin: "-40% 0px -40% 0px",
+  });
 
   return (
     <div className="Biotune-Gentic-Advantage">
@@ -83,9 +117,10 @@ function Advantages() {
               style={{ width: "80%", height: "auto" }}
             />
           </motion.div>
-          <div className="right-gentic-item-content">
+          <div ref={ref1} className="right-gentic-item-content">
             <div className="gentic-item-inner">
-              <div className="heading-item2">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView1 ? "highlight" : ""}`}>
                 Quality Testing Made Affordable
               </div>
               <div className="para-item">
@@ -112,9 +147,12 @@ function Advantages() {
               style={{ width: "80%", height: "auto" }}
             />
           </motion.div>
-          <div className="right-gentic-item-content">
+          <div ref={ref2} className="right-gentic-item-content">
             <div className="gentic-item-inner">
-              <div className="heading-item2">Discover Your Health Journey</div>
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView2 ? "highlight" : ""}`}>
+                Discover Your Health Journey
+              </div>
               <div className="para-item">
                 Accessed through web, app, and VR, users get detailed analysis
                 and tailored recommendations for better health.
@@ -139,9 +177,10 @@ function Advantages() {
               style={{ width: "80%", height: "auto" }}
             />
           </motion.div>
-          <div className="right-gentic-item-content">
+          <div ref={ref3} className="right-gentic-item-content">
             <div className="gentic-item-inner">
-              <div className="heading-item2">
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView3 ? "highlight" : ""}`}>
                 Longevity & Personalized Supplements{" "}
               </div>
               <div className="para-item">
@@ -168,9 +207,12 @@ function Advantages() {
               style={{ width: "80%", height: "auto" }}
             />
           </motion.div>
-          <div className="right-gentic-item-content">
+          <div ref={ref4} className="right-gentic-item-content">
             <div className="gentic-item-inner">
-              <div className="heading-item2">Data Storage and Security</div>
+              {/* <div className="heading-item2"> */}
+              <div className={`heading-item2 ${inView4 ? "highlight" : ""}`}>
+                Data Storage and Security
+              </div>
               <div className="para-item">
                 Our advanced encryption protocols safeguard your information
                 during collection, transmission, and storage, meeting

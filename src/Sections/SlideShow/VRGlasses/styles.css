@@ -34,6 +34,7 @@
   max-width: 525px;
   flex-direction: column;
   position: sticky;
+  height: -moz-fit-content;
   height: fit-content;
   top: 0;
 }

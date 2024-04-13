@@ -201,15 +201,21 @@
   transition: ease-in-out 0.4s;
   cursor: pointer;
 }
-.right-gentic-item-content .gentic-item-inner:hover .heading-item2 {
+.right-gentic-item-content .gentic-item-inner .heading-item2.highlight {
   color: var(--Blue, #0e2e51);
   opacity: 1;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px; /* 116.667% */
-  letter-spacing: 0.24px;
-  align-self: stretch;
+}
+@media (min-width: 768px) {
+  .right-gentic-item-content .gentic-item-inner .heading-item2:hover {
+    color: var(--Blue, #0e2e51);
+    opacity: 1;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 116.667% */
+    letter-spacing: 0.24px;
+    align-self: stretch;
+  }
 }
 .right-gentic-item-content .gentic-item-inner .heading-item {
   color: var(--Blue, #0e2e51);

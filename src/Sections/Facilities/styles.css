@@ -8,15 +8,18 @@
   overflow-x: hidden;
   overflow-y: visible;
   border-radius: 0px;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 0px;
 }
 .facilities-outter-container .facilities-video-wrapper video {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 768px) {
   .facilities-outter-container .facilities-video-wrapper {
+    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -25,6 +28,7 @@
   flex-direction: column;
   gap: 16px;
   width: 360px;
+  height: -moz-fit-content;
   height: fit-content;
   border-radius: 20px;
   background: rgb(255, 255, 255);
