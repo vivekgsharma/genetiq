@@ -38,7 +38,7 @@
 }
 
 .menu-btn {
-  display: flex;
+  display: none;
   padding: 12px;
   align-items: center;
   gap: 8px;
@@ -80,7 +80,6 @@
       padding-bottom: 12px;
 
       color: var(--Blue, #0e2e51);
-      font-family: "SF Pro Display";
       font-size: 28px;
       font-style: normal;
       font-weight: 500;
